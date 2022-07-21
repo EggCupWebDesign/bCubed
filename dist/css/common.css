@@ -1,0 +1,47 @@
+/* TODO: move into SASS */
+
+/* @link https://utopia.fyi/space/calculator?c=320,21,1.2,1280,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+:root {
+    --space-3xs: clamp(0.31rem, calc(0.29rem + 0.10vw), 0.38rem);
+    --space-2xs: clamp(0.63rem, calc(0.58rem + 0.21vw), 0.75rem);
+    --space-xs: clamp(0.94rem, calc(0.88rem + 0.31vw), 1.13rem);
+    --space-s: clamp(1.25rem, calc(1.17rem + 0.42vw), 1.50rem);
+    --space-m: clamp(1.88rem, calc(1.75rem + 0.63vw), 2.25rem);
+    --space-l: clamp(2.50rem, calc(2.33rem + 0.83vw), 3.00rem);
+    --space-xl: clamp(3.75rem, calc(3.50rem + 1.25vw), 4.50rem);
+    --space-2xl: clamp(5.00rem, calc(4.67rem + 1.67vw), 6.00rem);
+    --space-3xl: clamp(7.50rem, calc(7.00rem + 2.50vw), 9.00rem);
+
+    /* One-up pairs */
+    --space-3xs-2xs: clamp(0.31rem, calc(0.17rem + 0.73vw), 0.75rem);
+    --space-2xs-xs: clamp(0.63rem, calc(0.46rem + 0.83vw), 1.13rem);
+    --space-xs-s: clamp(0.94rem, calc(0.75rem + 0.94vw), 1.50rem);
+    --space-s-m: clamp(1.25rem, calc(0.92rem + 1.67vw), 2.25rem);
+    --space-m-l: clamp(1.88rem, calc(1.50rem + 1.88vw), 3.00rem);
+    --space-l-xl: clamp(2.50rem, calc(1.83rem + 3.33vw), 4.50rem);
+    --space-xl-2xl: clamp(3.75rem, calc(3.00rem + 3.75vw), 6.00rem);
+    --space-2xl-3xl: clamp(5.00rem, calc(3.67rem + 6.67vw), 9.00rem);
+
+    /* Custom pairs */
+    --space-s-l: clamp(1.25rem, calc(0.67rem + 2.92vw), 3.00rem);
+}
+
+/* @link https://utopia.fyi/type/calculator?c=320,20,1.2,1280,24,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+:root {
+    --step--2: clamp(0.84rem, calc(0.88rem + -0.04vw), 0.87rem);
+    --step--1: clamp(1.04rem, calc(1.01rem + 0.14vw), 1.13rem);
+    --step-0: clamp(1.25rem, calc(1.17rem + 0.42vw), 1.50rem);
+    --step-1: clamp(1.50rem, calc(1.33rem + 0.83vw), 2.00rem);
+    --step-2: clamp(1.80rem, calc(1.51rem + 1.44vw), 2.67rem);
+    --step-3: clamp(2.16rem, calc(1.70rem + 2.32vw), 3.55rem);
+    --step-4: clamp(2.59rem, calc(1.88rem + 3.57vw), 4.74rem);
+    --step-5: clamp(3.11rem, calc(2.04rem + 5.34vw), 6.31rem);
+}
+
+.wp-block-columns {
+    margin-bottom: var(--space-m-l);
+}
+
+:where(.wp-block-columns.has-background) {
+    padding: var(--space-xs-s);
+}

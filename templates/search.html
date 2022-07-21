@@ -1,0 +1,55 @@
+<!-- wp:template-part {"slug":"header","tagName":"header","className":"site-header"} /-->
+
+<!-- wp:group {"tagName":"main"} -->
+<main class="wp-block-group">
+    <!-- wp:group {"layout":{"inherit":true},"tagName":"header"} -->
+    <header class="wp-block-group">
+        <!-- wp:heading {"level":1,"align":"wide"} -->
+        <h1>Search</h1>
+        <!-- /wp:heading -->
+    </header>
+    <!-- /wp:group -->
+
+    <!-- wp:query -->
+    <div class="wp-block-query">
+        <!-- wp:group {"layout":{"inherit":true}} -->
+        <div class="wp-block-group">
+
+            <!-- wp:post-template -->
+                <!-- wp:post-title {"align":"wide"} /-->
+                <!-- wp:template-part {"slug":"post-meta","align":"wide"} /-->
+                <!-- wp:post-featured-image {"align":"wide"} /-->
+
+                <!-- wp:post-excerpt {"moreText":"Read more"} /-->
+                <!-- wp:template-part {"slug":"post-terms"} /-->
+            <!-- /wp:post-template -->
+
+            <!-- wp:template-part {"slug":"query-pagination","align":"wide"} /-->
+
+            <!-- wp:query-no-results -->
+
+                <!-- wp:heading {"level":2} -->
+                <h2 class="has-text-align-left">No results found</h2>
+                <!-- /wp:heading -->
+
+                <!-- wp:paragraph -->
+                <p class="has-text-align-left">Sorry, but nothing matched your search terms. Please try again with some different keywords.</p>
+                <!-- /wp:paragraph -->
+
+                <!-- wp:search {"label":"Search","showLabel":false,"buttonText":"Search"} /-->
+
+                <!-- wp:heading {"level":3} -->
+                <h3>Looking for a specific topic?</h3>
+                <!-- /wp:heading -->
+                <!-- wp:categories /-->
+
+            <!-- /wp:query-no-results -->
+
+        </div>
+        <!-- /wp:group -->
+    </div>
+    <!-- /wp:query -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer","className":"site-footer"} /-->

@@ -1,0 +1,4 @@
+.wp-block-cover-image,
+.wp-block-cover {
+    padding: var(--space-xs-s);
+}

@@ -1,0 +1,5 @@
+blockquote cite {
+    padding-right: var(--space-xs);
+    padding-left: var(--space-xs);
+    font-size: var(--wp--preset--font-size--small);
+}
