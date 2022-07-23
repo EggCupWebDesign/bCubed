@@ -4,7 +4,13 @@
     padding-right: var(--space-xs);
     padding-bottom: var(--space-2xs-xs);
     padding-left: var(--space-xs);
+    color: var(--wp--preset--color--foreground);
     background-color: antiquewhite;
     font-size: var(--step--1);
     font-weight: var(--wp--custom--font-weight--base);
+}
+
+.fixed-dimensions img {
+    object-fit: cover;
+    width: 100%;
 }

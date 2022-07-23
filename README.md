@@ -1,4 +1,4 @@
-# bCubed - The Block Based Boilerplate Theme
+# bCubed - The Block-Based Boilerplate Theme
 
 ## Styling
 ### Font Sizing

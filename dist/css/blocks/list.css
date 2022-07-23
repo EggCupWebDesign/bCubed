@@ -1,0 +1,17 @@
+.list-inline {
+    padding-left: var(--space-xs-4xs);
+    list-style: none;
+}
+
+.list-inline li {
+    display: inline-block;
+}
+
+.list-inline li:not(:last-child) {
+    margin-right: var(--space-xs);
+}
+
+.list-unstyled {
+    padding-left: var(--space-xs-4xs);
+    list-style: none;
+}

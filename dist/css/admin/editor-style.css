@@ -1,6 +1,10 @@
-/* @link https://utopia.fyi/space/calculator?c=320,21,1.2,1280,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
-
+/* ----------------------------------------- *
+ * Fluid Spacing
+ * TODO: move into SASS
+ * @link https://utopia.fyi/space/calculator/?c=320,21,1.2,1280,24,1.25,5,2,&s=0.75|0.5|0.25|0,1.5|2|3|4|6,s-l|xs-4xs
+ * ----------------------------------------- */
 :root {
+    --space-4xs: 0;
     --space-3xs: clamp(0.31rem, calc(0.29rem + 0.10vw), 0.38rem);
     --space-2xs: clamp(0.63rem, calc(0.58rem + 0.21vw), 0.75rem);
     --space-xs: clamp(0.94rem, calc(0.88rem + 0.31vw), 1.13rem);
@@ -12,6 +16,7 @@
     --space-3xl: clamp(7.50rem, calc(7.00rem + 2.50vw), 9.00rem);
 
     /* One-up pairs */
+    --space-4xs-3xs: clamp(0.00rem, calc(-0.12rem + 0.63vw), 0.38rem);
     --space-3xs-2xs: clamp(0.31rem, calc(0.17rem + 0.73vw), 0.75rem);
     --space-2xs-xs: clamp(0.63rem, calc(0.46rem + 0.83vw), 1.13rem);
     --space-xs-s: clamp(0.94rem, calc(0.75rem + 0.94vw), 1.50rem);
@@ -23,10 +28,14 @@
 
     /* Custom pairs */
     --space-s-l: clamp(1.25rem, calc(0.67rem + 2.92vw), 3.00rem);
+    --space-xs-4xs: clamp(0.00rem, calc(1.33rem + -1.67vw), 1.00rem);
 }
 
-/* @link https://utopia.fyi/type/calculator?c=320,20,1.2,1280,24,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
-
+/* ----------------------------------------- *
+ * Fluid Typography
+ * TODO: move into SASS
+ * @link https://utopia.fyi/type/calculator?c=320,20,1.2,1280,24,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l
+ * ----------------------------------------- */
 :root {
     --step--2: clamp(0.84rem, calc(0.88rem + -0.04vw), 0.87rem);
     --step--1: clamp(1.04rem, calc(1.01rem + 0.14vw), 1.13rem);
@@ -38,6 +47,45 @@
     --step-5: clamp(3.11rem, calc(2.04rem + 5.34vw), 6.31rem);
 }
 
+/* ----------------------------------------- *
+ * Header
+ * ----------------------------------------- */
+ .site-banner {
+    padding-top: var(--space-xs-s);
+    padding-bottom: var(--space-s-m);
+}
+
+/* ----------------------------------------- *
+ * Footer
+ * ----------------------------------------- */
+.site-footer {
+    margin-top: var(--space-xl-2xl);
+}
+
+.site-info {
+    padding-top: var(--space-l-xl);
+    padding-bottom: var(--space-xl-2xl);
+}
+
+.colophon {
+    padding-top: var(--space-2xs-xs);
+    padding-bottom: var(--space-s-m);
+    font-weight: var(--wp--custom--font-weight--base);
+}
+
+
+/* ----------------------------------------- *
+ * Block Patterns
+ * TODO: move into custom block stylesheet
+ * @link https://fullsiteediting.com/lessons/custom-block-styles/
+ * ----------------------------------------- */
+ .call-to-action-wide {
+    padding-top: var(--space-xs-s);
+    padding-right: var(--space-xs-s);
+    padding-bottom: var(--space-m-l);
+    padding-left: var(--space-xs-s);
+}
+
 
 /* ----------------------------------------- *
  * Cover Images - block styles in cover.css
@@ -45,6 +93,50 @@
 .wp-block-cover-image,
 .wp-block-cover {
     padding: var(--space-xs-s);
+}
+
+
+/* ----------------------------------------- *
+ * Inline Images - block styles in image.css
+ * ----------------------------------------- */
+ .wp-block-image figcaption {
+    margin-top: 0;
+    padding-top: var(--space-2xs-xs);
+    padding-right: var(--space-xs);
+    padding-bottom: var(--space-2xs-xs);
+    padding-left: var(--space-xs);
+    color: var(--wp--preset--color--foreground);
+    background-color: antiquewhite;
+    font-size: var(--step--1);
+    font-weight: var(--wp--custom--font-weight--base);
+}
+
+.fixed-dimensions img {
+    object-fit: cover;
+    width: 100%;
+}
+
+
+
+/* ----------------------------------------- *
+ * Lists - block styles in list.css
+ * ----------------------------------------- */
+ .list-inline {
+    padding-left: var(--space-xs-4xs);
+    list-style: none;
+}
+
+.list-inline li {
+    display: inline-block;
+}
+
+.list-inline li:not(:last-child) {
+    margin-right: var(--space-xs);
+}
+
+.list-unstyled {
+    padding-left: var(--space-xs-4xs);
+    list-style: none;
 }
 
 

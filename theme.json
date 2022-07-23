@@ -45,49 +45,64 @@
                     "slug": "background"
                 },
                 {
-                    "name": "Base Black",
-                    "color": "#1e1d1c",
-                    "slug": "foreground"
+                    "name": "Lighter Grey",
+                    "color": "#eaeaea",
+                    "slug": "greyscale-primary"
                 },
                 {
-					"name": "Darker Grey",
-                    "color": "#121212",
-					"slug": "greyscale-primary"
-				},
-                {
-                    "name": "Dark Grey",
-                    "color": "#444444",
+                    "name": "Light Grey",
+                    "color": "#bfbfbf",
                     "slug": "greyscale-secondary"
                 },
-				{
+                {
 					"name": "Mid Grey",
-					"color": "#999999",
+					"color": "#959595",
                     "slug": "greyscale-tertiary"
 				},
                 {
-                    "name": "Light Grey",
-                    "color": "#e2e2e2",
+                    "name": "Dark Grey",
+                    "color": "#6a6a6a",
                     "slug": "greyscale-quaternary"
                 },
                 {
-                    "name": "Lighter Grey",
-                    "color": "#f0f0f0",
-                    "slug": "greyscale-quinary"
+					"name": "Darker Grey",
+                    "color": "#404040",
+					"slug": "greyscale-quinary"
+				},
+                {
+                    "name": "Base Black",
+                    "color": "#151515",
+                    "slug": "foreground"
                 },
                 {
-					"name": "Pure White",
-					"color": "#ffffff",
-					"slug": "white"
+					"name": "Brand Primary",
+					"slug": "primary",
+					"color": "#6f7e9a"
 				},
                 {
-					"slug": "primary",
-					"color": "#57A61B",
-					"name": "Mid Green"
+					"name": "Brand Primary (Light)",
+					"slug": "primary-light",
+					"color": "#9eadcb"
+				},
+                {
+					"name": "Brand Primary (Dark)",
+					"slug": "primary-dark",
+					"color": "#43526c"
 				},
 				{
+					"name": "Brand Secondary",
 					"slug": "secondary",
-					"color": "#3C7312",
-					"name": "Dark Green"
+					"color": "#454d33"
+				},
+                {
+					"name": "Brand Secondary (Light)",
+					"slug": "secondary-light",
+					"color": "#71795d"
+				},
+                {
+					"name": "Brand Secondary (Dark)",
+					"slug": "secondary-dark",
+					"color": "#1e250c"
 				},
                 {
                     "name": "Link Blue",
@@ -120,16 +135,19 @@
             },
             "line-height": {
                 "base": 1.125,
-                "tiny": "calc(var(--wp--custom--line-height--base) / var(--wp--custom--spacing--scale))",
+                "tiny": "calc(var(--wp--custom--line-height--base) / var(--wp--custom--spacing--scale-sm))",
                 "small": "var(--wp--custom--line-height--base)",
-                "normal": "calc(var(--wp--custom--line-height--base) * var(--wp--custom--spacing--scale))",
-                "medium": "calc(var(--wp--custom--line-height--base) * var(--wp--custom--spacing--scale-squared))",
-                "huge": "calc(var(--wp--custom--line-height--base) * var(--wp--custom--spacing--scale-cubed))"
+                "normal": "calc(var(--wp--custom--line-height--base) * var(--wp--custom--spacing--scale-sm))",
+                "medium": "calc(var(--wp--custom--line-height--base) * var(--wp--custom--spacing--scale-sm-squared))",
+                "huge": "calc(var(--wp--custom--line-height--base) * var(--wp--custom--spacing--scale-sm-cubed))"
             },
             "spacing": {
-                "scale": 1.333,
-                "scale-squared": "calc(var(--wp--custom--spacing--scale) * var(--wp--custom--spacing--scale))",
-                "scale-cubed": "calc(var(--wp--custom--spacing--scale) * var(--wp--custom--spacing--scale) * var(--wp--custom--spacing--scale))"
+                "scale-sm": 1.25,
+                "scale-sm-squared": "calc(var(--wp--custom--spacing--scale-sm) * var(--wp--custom--spacing--scale-sm))",
+                "scale-sm-cubed": "calc(var(--wp--custom--spacing--scale-sm-squared) * var(--wp--custom--spacing--scale-sm))",
+                "scale-lg": 1.333,
+                "scale-lg-squared": "calc(var(--wp--custom--spacing--scale-lg) * var(--wp--custom--spacing--scale-lg))",
+                "scale-lg-cubed": "calc(var(--wp--custom--spacing--scale-lg-squared) * var(--wp--custom--spacing--scale-lg))"
 			}
         },
         "layout": {
@@ -289,7 +307,7 @@
                     }
                 },
                 "color": {
-                    "text": "var(--wp--preset--color--greyscale-secondary)"
+                    "text": "var(--wp--preset--color--greyscale-quaternary)"
                 }
             },
             "core/post-excerpt": {
@@ -304,10 +322,10 @@
 						},
 						"spacing": {
 							"padding": {
-								"top": "calc(1rem * (var(--wp--custom--spacing--scale) / 2) + 2px)",
-								"right": "calc(1em * var(--wp--custom--spacing--scale-cubed) + 2px)",
-								"bottom": "calc(1rem * (var(--wp--custom--spacing--scale) / 2) + 2px)",
-								"left": "calc(1em * var(--wp--custom--spacing--scale-cubed) + 2px)"
+								"top": "calc(1rem * (var(--wp--custom--spacing--scale-lg) / 2) + 2px)",
+								"right": "calc(1em * var(--wp--custom--spacing--scale-lg-cubed) + 2px)",
+								"bottom": "calc(1rem * (var(--wp--custom--spacing--scale-lg) / 2) + 2px)",
+								"left": "calc(1em * var(--wp--custom--spacing--scale-lg-cubed) + 2px)"
 							}
 						},
                         "typography": {
@@ -338,7 +356,7 @@
             },
             "core/pullquote": {
                 "color": {
-                    "background": "var(--wp--preset--color--greyscale-quinary)"
+                    "background": "var(--wp--preset--color--greyscale-primary)"
                 },
                 "spacing": {
                     "padding": {
@@ -360,11 +378,11 @@
             "core/quote": {
                 "border": {
                     "style": "solid",
-                    "color": "var(--wp--preset--color--greyscale-secondary)",
+                    "color": "var(--wp--preset--color--greyscale-quaternary)",
                     "width": "0 0 0 5px"
                 },
                 "color": {
-                    "text": "var(--wp--preset--color--greyscale-secondary)",
+                    "text": "var(--wp--preset--color--greyscale-quinary)",
                     "background": "antiquewhite"
                 },
                 "spacing": {
@@ -422,14 +440,14 @@
                 "typography": {
 				    "fontSize": "var(--wp--preset--font-size--x-large)",
                     "fontWeight": "var(--wp--custom--font-weight--medium)",
-                    "lineHeight": "var(--wp--custom--line-height--small)"
+                    "lineHeight": "var(--wp--custom--line-height--normal)"
                 }
             },
             "h3": {
                 "typography": {
 				    "fontSize": "var(--wp--preset--font-size--large)",
                     "fontWeight": "var(--wp--custom--font-weight--medium)",
-                    "lineHeight": "var(--wp--custom--line-height--small)"
+                    "lineHeight": "var(--wp--custom--line-height--normal)"
                 }
             },
             "h4": {
@@ -443,8 +461,10 @@
                 "typography": {
 				    "fontSize": "var(--wp--preset--font-size--medium)",
                     "fontWeight": "500",
-                    "lineHeight": "var(--wp--custom--line-height--normal)",
-                    "textDecoration": "overline"
+                    "lineHeight": "var(--wp--custom--line-height--normal)"
+                },
+                "color": {
+                    "text": "var(--wp--preset--color--greyscale-quinary)"
                 }
             },
             "h6": {
@@ -455,7 +475,7 @@
                     "textTransform": "uppercase"
                 },
                 "color": {
-                    "text": "var(--wp--preset--color--greyscale-secondary)"
+                    "text": "var(--wp--preset--color--greyscale-quaternary)"
                 }
             }
         },

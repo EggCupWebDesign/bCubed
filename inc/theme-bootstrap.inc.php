@@ -44,6 +44,7 @@ function Enqueue_Block_styles()
     $Arr_styled_blocks = [
         'cover',
         'image',
+        'list',
         'post-date',
         'pullquote',
         'quote'
