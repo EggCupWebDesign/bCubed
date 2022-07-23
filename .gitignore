@@ -1,0 +1,180 @@
+# -----------------------------------------------------------------
+# .gitignore
+#
+# This file specifies intentionally untracked files to ignore
+# http://git-scm.com/docs/gitignore
+#
+# NOTES:
+# The purpose of gitignore files is to ensure that certain files not
+# intended to be tracked by Git remain untracked.
+#
+# To ignore uncommitted changes in a file that is already tracked,
+# use `git update-index --assume-unchanged`.
+#
+# To stop tracking a file that is currently tracked,
+# use `git rm --cached`
+#
+# -----------------------------------------------------------------
+
+# Composer
+vendor/
+
+# Always-ignore extensions #
+############################
+.gitconfig
+.env
+.env.*
+!.env.example
+*.diff
+*.err
+*.orig
+**/*.log
+*.rej
+*.sass-cache
+*.css.map
+
+~*
+**/*~
+**/*.bak
+**/*.sw[abcdefghijklmnop]
+**/*.vi
+
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+.cache
+.project
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+.settings
+.tmproj
+*.esproj
+nbproject
+.sass-cache/*
+.rvmrc
+
+
+# cPanel generated files #
+##########################
+.accesshash
+.bash_*
+.bashrc
+.cagefs/
+.cl.selector/
+.config/
+.contactemail
+.cpanel/
+.ftpquota
+# Ignore root-level .htaccess, which is server-specific
+/.htaccess
+.htpasswds
+.lastlogin
+.lesshst
+.local/
+.pearrc
+.razor/
+.softaculous
+.spamassassin/
+.spamassassinboxenable
+.spamassassinenable
+.subaccounts
+.ssh/
+.trash
+.viminfo
+.well-known/
+.zshrc
+access-logs
+cpanelbranding/
+etc/
+lscache/
+lscmData/
+mail/
+php/
+ssl/
+www
+
+
+# Logs and databases #
+######################
+*.log
+#*.sql			# Using Git to backup MySQL dumps
+*.sqlite
+error_log
+
+# Dreamweaver added files
+_notes
+dwsync.xml
+
+# Komodo
+*.komodoproject
+.komodotools
+
+
+# Folders to ignore #
+#####################
+.hg
+.idea
+.project
+.svn
+.CVS
+
+/backup/
+/logs/
+/old/
+/private/
+/tmp/
+/trash/
+
+
+# Video files #
+###############
+*.wmv
+*.mpg
+*.mpeg
+*.mp4
+*.mov
+*.flv
+*.avi
+*.ogv
+*.ogg
+*.webm
+
+
+# Audio files #
+###############
+*.wav
+*.mp3
+*.wma
