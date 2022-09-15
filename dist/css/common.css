@@ -1,7 +1,7 @@
 /* ----------------------------------------- *
  * Fluid Spacing
  * TODO: move into SASS
- * @link https://utopia.fyi/space/calculator/?c=320,21,1.2,1280,24,1.25,5,2,&s=0.75|0.5|0.25|0,1.5|2|3|4|6,s-l|xs-4xs
+ * @link https://utopia.fyi/space/calculator/?c=320,21,1.2,1280,24,1.25,5,2,&s=0.75|0.5|0.25|0,1.5|2|3|4|6,s-l|xs-4xs|xs-m
  * ----------------------------------------- */
  :root {
     --space-4xs: 0;
@@ -29,6 +29,7 @@
     /* Custom pairs */
     --space-s-l: clamp(1.25rem, calc(0.67rem + 2.92vw), 3.00rem);
     --space-xs-4xs: clamp(0.00rem, calc(1.33rem + -1.67vw), 1.00rem);
+    --space-xs-m: clamp(1.00rem, calc(0.58rem + 2.08vw), 2.25rem);
 }
 
 /* ----------------------------------------- *
@@ -78,14 +79,17 @@
 /* ----------------------------------------- *
  * Navigation
  * ----------------------------------------- */
-.wp-block-navigation:where(.has-background) .wp-block-navigation-item__content {
-    padding: var(--space-2xs-xs);
+ .wp-block-navigation .wp-block-navigation-item__content {
+    padding: var(--space-3xs-2xs) var(--space-2xs-xs);
 }
 .wp-block-navigation-item__content:active,
 .wp-block-navigation-item__content:focus,
 .wp-block-navigation-item__content:hover {
+    color: var(--wp--preset--color--background);
     background: var(--wp--preset--color--primary);
 }
+
+.wp-block-navigation__responsive-container-open { padding: var(--space-2xs); }
 
 /* ----------------------------------------- *
  * Footer

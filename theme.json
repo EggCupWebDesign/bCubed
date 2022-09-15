@@ -346,6 +346,13 @@
                     }
                 }
             },
+            "core/post-title": {
+                "spacing": {
+                    "padding": {
+                        "top": "var(--space-l-xl)"
+                    }
+                }
+            },
             "core/preformatted": {
                 "spacing": {
                     "padding": {

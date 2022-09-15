@@ -1,9 +1,9 @@
 /* ----------------------------------------- *
  * Fluid Spacing
  * TODO: move into SASS
- * @link https://utopia.fyi/space/calculator/?c=320,21,1.2,1280,24,1.25,5,2,&s=0.75|0.5|0.25|0,1.5|2|3|4|6,s-l|xs-4xs
+ * @link https://utopia.fyi/space/calculator/?c=320,21,1.2,1280,24,1.25,5,2,&s=0.75|0.5|0.25|0,1.5|2|3|4|6,s-l|xs-4xs|xs-m
  * ----------------------------------------- */
-:root {
+ :root {
     --space-4xs: 0;
     --space-3xs: clamp(0.31rem, calc(0.29rem + 0.10vw), 0.38rem);
     --space-2xs: clamp(0.63rem, calc(0.58rem + 0.21vw), 0.75rem);
@@ -29,6 +29,7 @@
     /* Custom pairs */
     --space-s-l: clamp(1.25rem, calc(0.67rem + 2.92vw), 3.00rem);
     --space-xs-4xs: clamp(0.00rem, calc(1.33rem + -1.67vw), 1.00rem);
+    --space-xs-m: clamp(1.00rem, calc(0.58rem + 2.08vw), 2.25rem);
 }
 
 /* ----------------------------------------- *
@@ -53,7 +54,35 @@
  .site-banner {
     padding-top: var(--space-xs-s);
     padding-bottom: var(--space-s-m);
+    text-align: center;
 }
+.header-cta {
+    font-weight: var(--wp--custom--font-weight--medium);
+}
+
+@media ( min-width: 782px ) {
+    .header-branding {
+        text-align: left;
+    }
+    .header-cta {
+        text-align: right;
+    }
+}
+
+/* ----------------------------------------- *
+ * Navigation
+ * ----------------------------------------- */
+ .wp-block-navigation .wp-block-navigation-item__content {
+    padding: var(--space-3xs-2xs) var(--space-2xs-xs);;
+}
+.wp-block-navigation-item__content:active,
+.wp-block-navigation-item__content:focus,
+.wp-block-navigation-item__content:hover {
+    color: var(--wp--preset--color--background);
+    background: var(--wp--preset--color--primary);
+}
+
+.wp-block-navigation__responsive-container-open { padding: var(--space-2xs); }
 
 /* ----------------------------------------- *
  * Footer
@@ -75,15 +104,11 @@
 
 
 /* ----------------------------------------- *
- * Block Patterns
- * TODO: move into custom block stylesheet
+ * Custom Block Styles
  * @link https://fullsiteediting.com/lessons/custom-block-styles/
  * ----------------------------------------- */
- .call-to-action-wide {
-    padding-top: var(--space-xs-s);
-    padding-right: var(--space-xs-s);
-    padding-bottom: var(--space-m-l);
-    padding-left: var(--space-xs-s);
+.is-style-call-to-action {
+    padding: var(--space-s-m) var(--space-xs-m) var(--space-l-xl) var(--space-xs-m);
 }
 
 
@@ -117,27 +142,16 @@
 }
 
 
-
 /* ----------------------------------------- *
  * Lists - block styles in list.css
  * ----------------------------------------- */
- .list-inline {
-    padding-left: var(--space-xs-4xs);
-    list-style: none;
-}
-
-.list-inline li {
-    display: inline-block;
-}
-
-.list-inline li:not(:last-child) {
-    margin-right: var(--space-xs);
-}
-
-.list-unstyled {
-    padding-left: var(--space-xs-4xs);
-    list-style: none;
-}
+ .is-style-list-unstyled,
+ .is-style-list-inline {
+     padding-left: var(--space-xs-4xs);
+     list-style: none;
+ }
+ .is-style-list-inline li { display: inline-block; }
+ .is-style-list-inline li:not(:last-child) { margin-right: var(--space-xs); }
 
 
 /* ----------------------------------------- *
@@ -161,4 +175,15 @@ blockquote cite {
     padding-right: var(--space-xs);
     padding-left: var(--space-xs);
     font-size: var(--wp--preset--font-size--normal);
+}
+
+
+/* ----------------------------------------- *
+ * Tables - block styles in table.css
+ * ----------------------------------------- */
+.wp-block-table { font-size: var(--wp--preset--font-size--small); }
+
+.wp-block-table th,
+.wp-block-table td {
+    padding: var(--space-3xs-2xs) var(--space-3xs-2xs);
 }
