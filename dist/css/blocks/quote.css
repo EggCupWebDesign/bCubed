@@ -1,5 +1,10 @@
+.wp-block-quote p {
+    margin-top: var(--space-xs-s);
+    margin-bottom: var(--space-xs-s);
+}
+
 blockquote cite {
-    padding-right: var(--space-xs);
-    padding-left: var(--space-xs);
+    padding-right: var(--space-xs-4xs);
+    padding-left: var(--space-xs-4xs);
     font-size: var(--wp--preset--font-size--small);
 }

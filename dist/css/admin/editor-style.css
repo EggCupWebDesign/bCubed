@@ -3,7 +3,7 @@
  * TODO: move into SASS
  * @link https://utopia.fyi/space/calculator/?c=320,21,1.2,1280,24,1.25,5,2,&s=0.75|0.5|0.25|0,1.5|2|3|4|6,s-l|xs-4xs|xs-m
  * ----------------------------------------- */
- :root {
+:root {
     --space-4xs: 0;
     --space-3xs: clamp(0.31rem, calc(0.29rem + 0.10vw), 0.38rem);
     --space-2xs: clamp(0.63rem, calc(0.58rem + 0.21vw), 0.75rem);
@@ -49,21 +49,39 @@
 }
 
 /* ----------------------------------------- *
+ * Reset and defaults
+ * ----------------------------------------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* ----------------------------------------- *
+ * HTML Elements
+ * ----------------------------------------- */
+address {
+    font-style: normal;
+}
+
+/* ----------------------------------------- *
  * Header
  * ----------------------------------------- */
- .site-banner {
+.site-banner {
     padding-top: var(--space-xs-s);
     padding-bottom: var(--space-s-m);
     text-align: center;
 }
+
 .header-cta {
     font-weight: var(--wp--custom--font-weight--medium);
 }
 
-@media ( min-width: 782px ) {
+@media (min-width: 782px) {
     .header-branding {
         text-align: left;
     }
+
     .header-cta {
         text-align: right;
     }
@@ -72,9 +90,12 @@
 /* ----------------------------------------- *
  * Navigation
  * ----------------------------------------- */
- .wp-block-navigation .wp-block-navigation-item__content {
-    padding: var(--space-3xs-2xs) var(--space-2xs-xs);;
+.wp-block-navigation .wp-block-navigation-item__content {
+    padding: var(--space-3xs-2xs) var(--space-2xs-xs);
+    text-transform: capitalize;
 }
+
+.current-menu-item .wp-block-navigation-item__content,
 .wp-block-navigation-item__content:active,
 .wp-block-navigation-item__content:focus,
 .wp-block-navigation-item__content:hover {
@@ -82,7 +103,9 @@
     background: var(--wp--preset--color--primary);
 }
 
-.wp-block-navigation__responsive-container-open { padding: var(--space-2xs); }
+.wp-block-navigation__responsive-container-open {
+    padding: var(--space-2xs);
+}
 
 /* ----------------------------------------- *
  * Footer
@@ -102,29 +125,115 @@
     font-weight: var(--wp--custom--font-weight--base);
 }
 
+/* ----------------------------------------- *
+ * Page Content
+ * ----------------------------------------- */
+.is-layout-flow .page-header {
+    margin-top: var(--space-xl-2xl);
+}
+
+/* ----------------------------------------- *
+ * Buttons
+ * ----------------------------------------- */
+button.wp-element-button,
+.wp-block-button .wp-block-button__link {
+    border: none;
+    background-color: var(--wp--preset--color--secondary);
+    border-radius: var(--wp--custom--border--radius--sm);
+    color: var(--wp--preset--color--background);
+    font-weight: var(--wp--custom--font-weight--heavy);
+}
+
 
 /* ----------------------------------------- *
  * Custom Block Styles
  * @link https://fullsiteediting.com/lessons/custom-block-styles/
  * ----------------------------------------- */
-.is-style-call-to-action {
+
+/* ----------------------------------------- *
+ * Search forms - block styles in search.css
+ * ----------------------------------------- */
+label {
+    display: inline-block;
+    font-weight: var(--wp--custom--font-weight--medium);
+    margin-bottom: var(--space-4xs-3xs);
+}
+
+.wp-block-search__input {
+    font-size: var(--step-2);
+}
+
+.wp-block-query-no-results,
+.wp-block-post-template .wp-block-post {
+    background-color: var(--wp--preset--color--greyscale-primary);
+    margin-top: var(--space-s-m);
+    margin-bottom: var(--space-s-m);
+    padding-top: var(--space-l);
+    padding-right: var(--space-s-l);
+    padding-bottom: var(--space-l);
+    padding-left: var(--space-s-l);
+}
+
+/* ----------------------------------------- *
+ * Groups - block styles in group.css
+ * ----------------------------------------- */
+.wp-block-group.is-style-call-to-action {
+    margin-top: var(--space-m-l);
+    margin-bottom: var(--space-m-l);
     padding: var(--space-s-m) var(--space-xs-m) var(--space-l-xl) var(--space-xs-m);
 }
 
+.wp-block-group.is-style-call-to-action>*,
+.wp-block-group.is-style-call-to-action .wp-block-buttons {
+    padding-right: var(--space-3xs);
+    padding-left: var(--space-3xs);
+}
+
+.wp-block-group.is-style-callout {
+    margin-top: var(--space-xs-s);
+    margin-bottom: var(--space-xs-s);
+    padding: var(--space-xs-s) var(--space-s-m);
+}
+
+.wp-block-group.is-style-well {
+    margin-top: var(--space-xs-s);
+    margin-bottom: var(--space-xs-s);
+    padding: var(--space-xs-s) var(--space-xs-s);
+}
 
 /* ----------------------------------------- *
  * Cover Images - block styles in cover.css
  * ----------------------------------------- */
-.wp-block-cover-image,
-.wp-block-cover {
-    padding: var(--space-xs-s);
+.wp-block-cover:not(.is-style-cover-hero) {
+    padding-top: var(--space-s-m);
+    padding-right: var(--space-xs-s);
+    padding-bottom: var(--space-s-m);
+    padding-left: var(--space-xs-s);
 }
 
+body .is-layout-constrained>.wp-block-cover:not(.is-style-cover-hero) {
+    margin-block-start: var(--space-m-l);
+    margin-block-end: var(--space-m-l);
+}
+
+.wp-block-cover.is-style-cover-hero {
+    margin-bottom: var(--space-l-xl);
+    padding: var(--space-xl-2xl) var(--space-m-l);
+}
+
+.wp-block-cover.is-style-cover-hero h1 {
+    font-size: var(--wp--preset--font-size--gigantic);
+}
+
+.is-style-cover-hero .wp-block-group.is-style-call-to-action {
+    margin-top: var(--space-m);
+    margin-bottom: var(--space-m);
+}
 
 /* ----------------------------------------- *
  * Inline Images - block styles in image.css
  * ----------------------------------------- */
- .wp-block-image figcaption {
+.wp-block-image figcaption {
     margin-top: 0;
     padding-top: var(--space-2xs-xs);
     padding-right: var(--space-xs);
@@ -141,18 +250,22 @@
     width: 100%;
 }
 
-
 /* ----------------------------------------- *
  * Lists - block styles in list.css
  * ----------------------------------------- */
- .is-style-list-unstyled,
- .is-style-list-inline {
-     padding-left: var(--space-xs-4xs);
-     list-style: none;
- }
- .is-style-list-inline li { display: inline-block; }
- .is-style-list-inline li:not(:last-child) { margin-right: var(--space-xs); }
+.is-style-list-unstyled,
+.is-style-list-inline {
+    padding-left: var(--space-xs-4xs);
+    list-style: none;
+}
 
+.is-style-list-inline li {
+    display: inline-block;
+}
+
+.is-style-list-inline li:not(:last-child) {
+    margin-right: var(--space-xs);
+}
 
 /* ----------------------------------------- *
  * Quotes - block styles in quote.css
@@ -162,7 +275,6 @@ blockquote cite {
     padding-left: var(--space-xs);
     font-size: var(--wp--preset--font-size--small);
 }
-
 
 /* ----------------------------------------- *
  * Pullquotes - block styles in pullquote.css
@@ -177,13 +289,38 @@ blockquote cite {
     font-size: var(--wp--preset--font-size--normal);
 }
 
-
 /* ----------------------------------------- *
  * Tables - block styles in table.css
  * ----------------------------------------- */
-.wp-block-table { font-size: var(--wp--preset--font-size--small); }
+.wp-block-table {
+    font-size: var(--wp--preset--font-size--small);
+}
 
 .wp-block-table th,
 .wp-block-table td {
     padding: var(--space-3xs-2xs) var(--space-3xs-2xs);
+}
+
+/* ----------------------------------------- *
+ * Global Utility Classes
+ * ----------------------------------------- */
+.has-light-font-weight {
+    font-weight: var(--wp--custom--font-weight--light)
+}
+
+.has-base-font-weight {
+    font-weight: var(--wp--custom--font-weight--base)
+}
+
+.has-medium-font-weight {
+    font-weight: var(--wp--custom--font-weight--medium)
+}
+
+.has-heavy-font-weight {
+    font-weight: var(--wp--custom--font-weight--heavy)
+}
+
+.block-width__100 {
+    width: 100%;
+    flex-basis: 100%;
 }

@@ -3,7 +3,7 @@
  * TODO: move into SASS
  * @link https://utopia.fyi/space/calculator/?c=320,21,1.2,1280,24,1.25,5,2,&s=0.75|0.5|0.25|0,1.5|2|3|4|6,s-l|xs-4xs|xs-m
  * ----------------------------------------- */
- :root {
+:root {
     --space-4xs: 0;
     --space-3xs: clamp(0.31rem, calc(0.29rem + 0.10vw), 0.38rem);
     --space-2xs: clamp(0.63rem, calc(0.58rem + 0.21vw), 0.75rem);
@@ -49,9 +49,18 @@
 }
 
 /* ----------------------------------------- *
+ * Reset and defaults
+ * ----------------------------------------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* ----------------------------------------- *
  * HTML Elements
  * ----------------------------------------- */
- address {
+address {
     font-style: normal;
 }
 
@@ -63,14 +72,16 @@
     padding-bottom: var(--space-s-m);
     text-align: center;
 }
+
 .header-cta {
     font-weight: var(--wp--custom--font-weight--medium);
 }
 
-@media ( min-width: 782px ) {
+@media (min-width: 782px) {
     .header-branding {
         text-align: left;
     }
+
     .header-cta {
         text-align: right;
     }
@@ -79,17 +90,25 @@
 /* ----------------------------------------- *
  * Navigation
  * ----------------------------------------- */
- .wp-block-navigation .wp-block-navigation-item__content {
+.wp-block-navigation__responsive-close {
+    max-width: var(--wp--custom--layout--width--widest, 100%);
+}
+
+.wp-block-navigation .wp-block-navigation-item__content {
     padding: var(--space-3xs-2xs) var(--space-2xs-xs);
 }
-.wp-block-navigation-item__content:active,
-.wp-block-navigation-item__content:focus,
-.wp-block-navigation-item__content:hover {
+
+.wp-block-navigation__responsive-container:not(.is-menu-open) .current-menu-item.wp-block-navigation-link a,
+.wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation-link a:active,
+.wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation-link a:focus,
+.wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation-link a:hover {
     color: var(--wp--preset--color--background);
     background: var(--wp--preset--color--primary);
 }
 
-.wp-block-navigation__responsive-container-open { padding: var(--space-2xs); }
+.wp-block-navigation__responsive-container-open {
+    padding: var(--space-2xs);
+}
 
 /* ----------------------------------------- *
  * Footer
@@ -110,6 +129,25 @@
 }
 
 /* ----------------------------------------- *
+ * Page Content
+ * ----------------------------------------- */
+.is-layout-flow .page-header {
+    margin-top: var(--space-xl-2xl);
+}
+
+/* ----------------------------------------- *
+ * Buttons
+ * ----------------------------------------- */
+button.wp-element-button,
+.wp-block-button .wp-block-button__link {
+    border: none;
+    background-color: var(--wp--preset--color--secondary);
+    border-radius: var(--wp--custom--border--radius--sm);
+    color: var(--wp--preset--color--background);
+    font-weight: var(--wp--custom--font-weight--heavy);
+}
+
+/* ----------------------------------------- *
  * Custom Templates
  * TODO: can these be conditionally loaded?
  * ----------------------------------------- */
@@ -126,4 +164,28 @@
 
 :where(.wp-block-columns.has-background) {
     padding: var(--space-xs-s);
+}
+
+/* ----------------------------------------- *
+ * Global Utility Classes
+ * ----------------------------------------- */
+.has-light-font-weight {
+    font-weight: var(--wp--custom--font-weight--light)
+}
+
+.has-base-font-weight {
+    font-weight: var(--wp--custom--font-weight--base)
+}
+
+.has-medium-font-weight {
+    font-weight: var(--wp--custom--font-weight--medium)
+}
+
+.has-heavy-font-weight {
+    font-weight: var(--wp--custom--font-weight--heavy)
+}
+
+.block-width__100 {
+    width: 100%;
+    flex-basis: 100%;
 }

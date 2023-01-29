@@ -1,0 +1,191 @@
+/*!
+ * Bootstrap Reboot v5.0.2 (https://getbootstrap.com/)
+ * (Only form reboot styles included in this project as WP has its own reset styles
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
+ */
+
+button:focus:not(:focus-visible) {
+    outline: 0;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+select {
+    word-wrap: normal;
+}
+
+select:disabled {
+    opacity: 1;
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+    -webkit-appearance: button;
+}
+
+[role=button],
+button:not(:disabled),
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled) {
+    cursor: pointer;
+}
+
+::-moz-focus-inner {
+    padding: 0;
+    border-style: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+fieldset {
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+legend {
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 0.5rem;
+    font-size: var(--wp--custom--font-size--medium);
+    line-height: inherit;
+}
+
+legend+* {
+    clear: left;
+}
+
+::-webkit-inner-spin-button {
+    height: auto;
+}
+
+[type=search] {
+    outline-offset: -2px;
+    -webkit-appearance: textfield;
+}
+
+
+/* ----------------------------------------- *
+ * Generic form styling
+ * ----------------------------------------- */
+.form-group,
+.form-help-block {
+    margin-block-start: var(--wp--style--block-gap);
+    margin-block-end: 0;
+}
+
+.form-help-block {
+    display: block;
+    color: var(--wp--preset--color--greyscale-quaternary);
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: var(--space-3xs-2xs) var(--space-2xs-xs);
+    background-color: var(--wp--preset--color--white);
+    background-clip: padding-box;
+    border: 1px solid var(--wp--preset--color--greyscale-primary);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: var(--wp--custom--border--radius--sm);
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+    color: var(--wp--preset--color--black);
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.form-control:disabled,
+.form-control[readonly] {
+    background-color: var(--wp--preset--color--greyscale-primary);
+    border: 1px solid var(--wp--preset--color--greyscale-secondary);
+    opacity: 1;
+}
+
+label {
+    display: inline-block;
+    font-weight: var(--wp--custom--font-weight--base);
+    margin-bottom: var(--space-4xs-3xs);
+}
+
+label.required {
+    font-weight: var(--wp--custom--font-weight--heavy);
+}
+
+label.required:after {
+    color: var(--wp--preset--color--vivid-red);
+    content: ' *';
+    display: inline;
+}
+
+
+/* ----------------------------------------- *
+ * CF7 styling
+ * ----------------------------------------- */
+.wpcf7-submit.wp-block-button__link {
+    font-weight: var(--wp--custom--font-weight--heavy);
+}
+
+.wpcf7 form .wpcf7-response-output {
+    margin: 2em 0 1em;
+    padding: var(--space-2xs-xs) var(--space-s-m);
+    border: none;
+    font-weight: var(--wp--custom--font-weight--heavy);
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+    background-color: var(--wp--preset--color--secondary-dark);
+    border: none;
+    color: var(--wp--preset--color--white);
+}
+
+.wpcf7 form.aborted .wpcf7-response-output,
+.wpcf7 form.failed .wpcf7-response-output,
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.spam .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output {
+    background-color: var(--wp--preset--color--vivid-red);
+    border: none;
+    color: var(--wp--preset--color--white);
+}
+
+.wpcf7-not-valid.form-control {
+    border-color: var(--wp--preset--color--vivid-red);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.wpcf7-not-valid.form-control:focus {
+    border-color: var(--wp--preset--color--vivid-red);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px var(--wp--preset--color--luminous-vivid-orange);
+}
+
+.wpcf7-not-valid-tip {
+    color: var(--wp--preset--color--vivid-red);
+    font-size: var(--wp--preset--font-size--small);
+    font-weight: var(--wp--custom--font-weight--heavy);
+    display: block;
+}

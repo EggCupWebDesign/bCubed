@@ -1,3 +1,23 @@
-.is-style-call-to-action {
+.wp-block-group.is-style-call-to-action {
+    margin-top: var(--space-m-l);
+    margin-bottom: var(--space-m-l);
     padding: var(--space-s-m) var(--space-xs-m) var(--space-l-xl) var(--space-xs-m);
+}
+
+.wp-block-group.is-style-call-to-action>*,
+.wp-block-group.is-style-call-to-action .wp-block-buttons {
+    padding-right: var(--space-3xs);
+    padding-left: var(--space-3xs);
+}
+
+.wp-block-group.is-style-callout {
+    margin-top: var(--space-xs-s);
+    margin-bottom: var(--space-xs-s);
+    padding: var(--space-xs-s) var(--space-s-m);
+}
+
+.wp-block-group.is-style-well {
+    margin-top: var(--space-xs-s);
+    margin-bottom: var(--space-xs-s);
+    padding: var(--space-xs-s) var(--space-xs-s);
 }

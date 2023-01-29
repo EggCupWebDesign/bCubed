@@ -1,4 +1,10 @@
-.wp-block-cover-image,
-.wp-block-cover {
-    padding: var(--space-xs-s);
+.wp-block-cover.is-style-cover-hero {
+    margin-bottom: var(--space-l-xl);
+    padding: var(--space-xl-2xl) var(--space-m-l);
+}
+.wp-block-cover.is-style-cover-hero h1 { font-size: var(--wp--preset--font-size--gigantic) };
+
+.is-style-cover-hero .wp-block-group.is-style-call-to-action {
+    margin-top: var(--space-m);
+    margin-bottom: var(--space-m);
 }

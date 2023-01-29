@@ -24,11 +24,13 @@ if (!defined('ABSPATH')) {
  * This script registers following functions with WP action hooks/filters:
  */
 add_action('after_setup_theme', __NAMESPACE__ . '\\Theme_bootstrap');
+add_action('after_setup_theme', __NAMESPACE__ . '\\Define_Block_styles');
 add_action('after_setup_theme', __NAMESPACE__ . '\\Enqueue_Block_styles');
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\Enqueue_Common_styles');
-add_action('after_setup_theme', __NAMESPACE__ . '\\Enqueue_Editor_styles');
-add_action('enqueue_block_editor_assets', __NAMESPACE__ . '\\Enqueue_Block_Editor_assets');
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\Dequeue_assets', 9999);
+add_action('enqueue_block_assets', __NAMESPACE__ . '\\Enqueue_Override_styles');
+add_action('enqueue_block_editor_assets', __NAMESPACE__ . '\\Enqueue_Block_Editor_assets');
+add_action('after_setup_theme', __NAMESPACE__ . '\\Enqueue_Editor_styles');
 
 
 /**
@@ -54,6 +56,11 @@ function Theme_bootstrap()
      * Add excerpt support to pages:
      */
     add_post_type_support('page', 'excerpt');
+
+    /**
+     * Remove <p> and <br/> from Contact Form 7:
+     */
+    add_filter('wpcf7_autop_or_not', '__return_false');
 }
 
 
@@ -69,29 +76,48 @@ function Theme_bootstrap()
  * @return null
  */
 function Define_Block_styles() {
+    $Str_theme_text_domain = wp_get_theme()->get('TextDomain');
+
     /**
      * Define custom block styles using a multi-dimensional array, with the
      * outer array keyed on the block package/name slug and the inner array
      * keyed on the name of the custom block style:
      */
     $Arr_custom_block_styles = [
+        'core/cover' => [
+            'hero' => [
+                'name'  => 'cover-hero',
+                'label' => __('Hero', $Str_theme_text_domain),
+                'style' => $Str_theme_text_domain . '-cover-hero'
+            ]
+        ],
         'core/group' => [
+            'callout' => [
+                'name'  => 'callout',
+                'label' => __('Callout', $Str_theme_text_domain),
+                'style' => $Str_theme_text_domain . '-group-callout'
+            ],
             'cta' => [
                 'name'  => 'call-to-action',
-                'label' => __('CTA', wp_get_theme()->get('TextDomain')),
-                'style' => wp_get_theme()->get('TextDomain') . '-cta-group'
+                'label' => __('CTA', $Str_theme_text_domain),
+                'style' => $Str_theme_text_domain . '-group-cta'
+            ],
+            'well' => [
+                'name'  => 'well',
+                'label' => __('Well', $Str_theme_text_domain),
+                'style' => $Str_theme_text_domain . '-group-well'
             ]
         ],
         'core/list' => [
             'inline' => [
                 'name'  => 'list-inline',
-                'label' => __('Inline', wp_get_theme()->get('TextDomain')),
-                'style' => wp_get_theme()->get('TextDomain') . '-list-inline'
+                'label' => __('Inline', $Str_theme_text_domain),
+                'style' => $Str_theme_text_domain . '-list-inline'
             ],
             'unstyled' => [
                 'name'  => 'list-unstyled',
-                'label' => __('Unstyled', wp_get_theme()->get('TextDomain')),
-                'style' => wp_get_theme()->get('TextDomain') . '-list-unstyled'
+                'label' => __('Unstyled', $Str_theme_text_domain),
+                'style' => $Str_theme_text_domain . '-list-unstyled'
             ]
         ]
     ];
@@ -125,6 +151,7 @@ function Enqueue_Block_styles()
             'post-date',
             'pullquote',
             'quote',
+            'search',
             'table'
         ]
     ];
@@ -199,8 +226,36 @@ function Enqueue_Block_Editor_assets()
 
 
 /**
- * Dequeue assets either globally or conditionally
- * ---
+ * Enqueues custom styles that are intended to override certain
+ * core or plugin styles, and that need to declare specific
+ * dependencies.
+ *
+ * @return void
+ */
+function Enqueue_Override_styles()
+{
+    if (has_block('contact-form-7/contact-form-selector')) {
+        /**
+         * Enqueue custom styles for CF7 and require the following
+         * dependencies: CF7 and WP core button block styles for the
+         * submit button
+         */
+        wp_enqueue_style(
+            wp_get_theme()->get('TextDomain') . '-form-cf7',
+            get_stylesheet_directory_uri() . '/dist/css/form-cf7.css',
+            [
+                'contact-form-7',
+                'wp-block-button',
+                'wp-block-buttons'
+            ],
+            wp_get_theme()->get('Version')
+        );
+    }
+}
+
+
+/**
+ * Dequeues assets either completely or conditionally.
  * This function is hooked in late so that it can
  * remove assets enqueued by plugins or core.
  *
@@ -208,7 +263,13 @@ function Enqueue_Block_Editor_assets()
  */
 function Dequeue_assets()
 {
-    global $post;
-
-    // Add in anything you'd like to dequeue
+    if (!has_block('contact-form-7/contact-form-selector')) {
+        /**
+         * Dequeue CF7 styles and script if there is no form block on
+         * the current page:
+         */
+        wp_dequeue_style('contact-form-7');
+        wp_dequeue_script('contact-form-7');
+        wp_dequeue_script('gtm4wp-contact-form-7-tracker');
+    }
 }
