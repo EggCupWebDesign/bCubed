@@ -1,6 +1,6 @@
 .is-style-list-unstyled,
 .is-style-list-inline {
-    padding-left: var(--space-xs);
+    padding-left: 0;
     list-style: none;
 }
 .is-style-list-inline li { display: inline-block; }

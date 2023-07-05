@@ -100,10 +100,12 @@ button.wp-element-button,
 }
 
 /* ----------------------------------------- *
- * Column Layouts
+ * Layouts
  * ----------------------------------------- */
-:where(.wp-block-columns.has-background) {
-    padding: var(--space-xs-s);
+.wp-block-post-header,
+.wp-block-post-content {
+    padding-left: var(--space-xs);
+    padding-right: var(--space-xs);
 }
 
 /* ----------------------------------------- *

@@ -280,44 +280,13 @@
                 }
             },
             "core/heading": {
-                "spacing": {
-                    "padding": {
-                        "left": "var(--space-xs)",
-                        "right": "var(--space-xs)"
-                    }
-                },
                 "typography": {
                     "fontFamily": "var(--wp--preset--font-family--serif)"
-                }
-            },
-            "core/list": {
-                "spacing": {
-                    "padding": {
-                        "right": "var(--space-xs)",
-                        "left": "var(--space-l-xl)"
-                    }
-                }
-            },
-            "core/paragraph": {
-                "spacing": {
-                    "padding": {
-                        "left": "var(--space-xs)",
-                        "right": "var(--space-xs)"
-                    }
                 }
             },
             "core/post-date": {
                 "typography": {
                     "fontSize": "var(--wp--custom--font-weight--medium)"
-                },
-                "spacing": {
-                    "margin": {
-                        "top": "auto"
-                    },
-                    "padding": {
-                        "left": "var(--space-xs)",
-                        "right": "var(--space-xs)"
-                    }
                 },
                 "color": {
                     "text": "var(--wp--preset--color--greyscale-quaternary)"
