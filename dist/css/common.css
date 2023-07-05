@@ -65,29 +65,6 @@ address {
 }
 
 /* ----------------------------------------- *
- * Header
- * ----------------------------------------- */
-.site-banner {
-    padding-top: var(--space-xs-s);
-    padding-bottom: var(--space-s-m);
-    text-align: center;
-}
-
-.header-cta {
-    font-weight: var(--wp--custom--font-weight--medium);
-}
-
-@media (min-width: 782px) {
-    .header-branding {
-        text-align: left;
-    }
-
-    .header-cta {
-        text-align: right;
-    }
-}
-
-/* ----------------------------------------- *
  * Navigation
  * ----------------------------------------- */
 .wp-block-navigation__responsive-close {
@@ -111,31 +88,6 @@ address {
 }
 
 /* ----------------------------------------- *
- * Footer
- * ----------------------------------------- */
-.site-footer {
-    margin-top: var(--space-xl-2xl);
-}
-
-.site-info {
-    padding-top: var(--space-l-xl);
-    padding-bottom: var(--space-xl-2xl);
-}
-
-.colophon {
-    padding-top: var(--space-2xs-xs);
-    padding-bottom: var(--space-s-m);
-    font-weight: var(--wp--custom--font-weight--base);
-}
-
-/* ----------------------------------------- *
- * Page Content
- * ----------------------------------------- */
-.is-layout-flow .page-header {
-    margin-top: var(--space-xl-2xl);
-}
-
-/* ----------------------------------------- *
  * Buttons
  * ----------------------------------------- */
 button.wp-element-button,
@@ -148,20 +100,8 @@ button.wp-element-button,
 }
 
 /* ----------------------------------------- *
- * Custom Templates
- * TODO: can these be conditionally loaded?
- * ----------------------------------------- */
-.page-template-page-empty main {
-    margin-top: 0;
-}
-
-/* ----------------------------------------- *
  * Column Layouts
  * ----------------------------------------- */
-.wp-block-columns {
-    margin-bottom: var(--space-m-l);
-}
-
 :where(.wp-block-columns.has-background) {
     padding: var(--space-xs-s);
 }

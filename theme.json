@@ -154,8 +154,8 @@
 			}
         },
         "layout": {
-            "contentSize": "45rem",
-            "wideSize": "57rem"
+            "contentSize": "48rem",
+            "wideSize": "65rem"
         },
         "spacing": {
             "blockGap": true,
@@ -501,7 +501,7 @@
 			"fontFamily": "var(--wp--preset--font-family--sans-serif)",
             "fontSize": "var(--wp--preset--font-size--normal)",
             "fontWeight": "var(--wp--custom--font-weight--light)",
-			"lineHeight": "var(--wp--custom--line-height--md)"
+			"lineHeight": "var(--wp--custom--line-height--normal)"
         }
     },
     "customTemplates": [

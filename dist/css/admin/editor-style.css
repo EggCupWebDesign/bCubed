@@ -65,29 +65,6 @@ address {
 }
 
 /* ----------------------------------------- *
- * Header
- * ----------------------------------------- */
-.site-banner {
-    padding-top: var(--space-xs-s);
-    padding-bottom: var(--space-s-m);
-    text-align: center;
-}
-
-.header-cta {
-    font-weight: var(--wp--custom--font-weight--medium);
-}
-
-@media (min-width: 782px) {
-    .header-branding {
-        text-align: left;
-    }
-
-    .header-cta {
-        text-align: right;
-    }
-}
-
-/* ----------------------------------------- *
  * Navigation
  * ----------------------------------------- */
 .wp-block-navigation .wp-block-navigation-item__content {
@@ -105,31 +82,6 @@ address {
 
 .wp-block-navigation__responsive-container-open {
     padding: var(--space-2xs);
-}
-
-/* ----------------------------------------- *
- * Footer
- * ----------------------------------------- */
-.site-footer {
-    margin-top: var(--space-xl-2xl);
-}
-
-.site-info {
-    padding-top: var(--space-l-xl);
-    padding-bottom: var(--space-xl-2xl);
-}
-
-.colophon {
-    padding-top: var(--space-2xs-xs);
-    padding-bottom: var(--space-s-m);
-    font-weight: var(--wp--custom--font-weight--base);
-}
-
-/* ----------------------------------------- *
- * Page Content
- * ----------------------------------------- */
-.is-layout-flow .page-header {
-    margin-top: var(--space-xl-2xl);
 }
 
 /* ----------------------------------------- *
@@ -177,6 +129,8 @@ label {
 /* ----------------------------------------- *
  * Groups - block styles in group.css
  * ----------------------------------------- */
+/* Groups, CTAs, Callouts and Wells
+-------------------------------------------------------------- */
 .wp-block-group.is-style-call-to-action {
     margin-top: var(--space-m-l);
     margin-bottom: var(--space-m-l);
@@ -196,10 +150,34 @@ label {
 }
 
 .wp-block-group.is-style-well {
-    margin-top: var(--space-xs-s);
-    margin-bottom: var(--space-xs-s);
     padding: var(--space-xs-s) var(--space-xs-s);
 }
+
+.wp-block-group.is-style-well-lg {
+    padding-top: var(--space-m-l);
+    padding-right: var(--space-m-l);
+    padding-bottom: var(--space-l-xl);
+    padding-left: var(--space-m-l);
+}
+
+.is-style-site-header,
+.is-style-site-footer {
+    padding-right: var(--space-2xs-xs);
+    padding-left: var(--space-2xs-xs);
+}
+
+.is-style-site-header {
+    padding-top: var(--space-xs-s);
+    padding-bottom: var(--space-xs-s);
+    margin-bottom: var(--space-m-l);
+}
+
+.is-style-site-footer {
+    padding-top: var(--space-m-l);
+    padding-bottom: var(--space-m-l);
+    margin-top: var(--space-xl-2xl);
+}
+
 
 /* ----------------------------------------- *
  * Cover Images - block styles in cover.css
@@ -253,19 +231,14 @@ body .is-layout-constrained>.wp-block-cover:not(.is-style-cover-hero) {
 /* ----------------------------------------- *
  * Lists - block styles in list.css
  * ----------------------------------------- */
-.is-style-list-unstyled,
-.is-style-list-inline {
-    padding-left: var(--space-xs-4xs);
-    list-style: none;
-}
-
-.is-style-list-inline li {
-    display: inline-block;
-}
-
-.is-style-list-inline li:not(:last-child) {
-    margin-right: var(--space-xs);
-}
+ .is-style-list-unstyled,
+ .is-style-list-inline {
+     padding-left: var(--space-xs);
+     list-style: none;
+ }
+ .is-style-list-inline li { display: inline-block; }
+ .is-style-list-inline li:not(:last-child) { margin-right: var(--space-xs); }
+ 
 
 /* ----------------------------------------- *
  * Quotes - block styles in quote.css
