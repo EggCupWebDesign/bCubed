@@ -1,3 +1,5 @@
+/* Groups, CTAs, Callouts and Wells
+-------------------------------------------------------------- */
 .wp-block-group.is-style-call-to-action {
     margin-top: var(--space-m-l);
     margin-bottom: var(--space-m-l);
@@ -20,4 +22,29 @@
     margin-top: var(--space-xs-s);
     margin-bottom: var(--space-xs-s);
     padding: var(--space-xs-s) var(--space-xs-s);
+}
+
+.wp-block-group.is-style-well.is-style-well-lg {
+    padding-top: var(--space-m-l);
+    padding-right: var(--space-m-l);
+    padding-bottom: var(--space-l-xl);
+    padding-left: var(--space-m-l);
+}
+
+.is-style-site-header,
+.is-style-site-footer {
+    padding-right: var(--space-2xs-xs);
+    padding-left: var(--space-2xs-xs);
+}
+
+.is-style-site-header {
+    padding-top: var(--space-xs-s);
+    padding-bottom: var(--space-xs-s);
+    margin-bottom: var(--space-m-l);
+}
+
+.is-style-site-footer {
+    padding-top: var(--space-m-l);
+    padding-bottom: var(--space-m-l);
+    margin-top: var(--space-xl-2xl);
 }

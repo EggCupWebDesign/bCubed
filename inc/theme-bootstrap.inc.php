@@ -106,7 +106,22 @@ function Define_Block_styles() {
                 'name'  => 'well',
                 'label' => __('Well', $Str_theme_text_domain),
                 'style' => $Str_theme_text_domain . '-group-well'
-            ]
+            ],
+            'well-lg' => [
+                'name'  => 'well-lg',
+                'label' => __('Large Well', $Str_theme_text_domain),
+                'style' => $Str_theme_text_domain . '-group-well-lg'
+            ],
+            'site-header' => [
+                'name'  => 'site-header',
+                'label' => __('Site Header', $Str_theme_text_domain),
+                'style' => $Str_theme_text_domain . '-site-header-group'
+            ],
+            'site-footer' => [
+                'name'  => 'site-footer',
+                'label' => __('Site Footer', $Str_theme_text_domain),
+                'style' => $Str_theme_text_domain . '-site-footer-group'
+            ],
         ],
         'core/list' => [
             'inline' => [
