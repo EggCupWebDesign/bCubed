@@ -2,6 +2,7 @@
     "$schema": "https://schemas.wp.org/trunk/theme.json",
     "version": 2,
     "settings": {
+        "appearanceTools": true,
         "blocks": {},
         "border": {
             "color": true,
@@ -159,11 +160,55 @@
         },
         "spacing": {
             "blockGap": true,
-            "customSpacingSize": true,
-            "margin": false,
-            "padding": false,
+            "customSpacingSize": false,
             "spacingScale": {},
-            "spacingSizes": [],
+			"spacingSizes": [
+				{
+					"size": "var(--space-3xs)",
+					"slug": "10",
+					"name": "1"
+				},
+				{
+					"size": "var(--space-2xs)",
+					"slug": "20",
+					"name": "2"
+				},
+				{
+					"size": "var(--space-xs)",
+					"slug": "30",
+					"name": "3"
+				},
+				{
+					"size": "var(--space-s)",
+					"slug": "40",
+					"name": "4"
+				},
+				{
+					"size": "var(--space-m)",
+					"slug": "50",
+					"name": "5"
+				},
+				{
+					"size": "var(--space-l)",
+					"slug": "60",
+					"name": "6"
+				},
+				{
+					"size": "var(--space-xl)",
+					"slug": "70",
+					"name": "7"
+				},
+				{
+					"size": "var(--space-2xl)",
+					"slug": "80",
+					"name": "8"
+				},
+				{
+					"size": "var(--space-3xl)",
+					"slug": "90",
+					"name": "9"
+				}
+			],
             "units": [
                 "px",
                 "em",
@@ -173,6 +218,7 @@
                 "%"
             ]
         },
+        "useRootPaddingAwareAlignments": true,
         "typography": {
             "customFontSize": false,
             "dropCap": false,
@@ -464,7 +510,11 @@
             }
         },
         "spacing": {
-            "blockGap": "var(--space-xs-s)"
+            "blockGap": "var(--space-xs-s)",
+            "padding": {
+				"right": "var(--wp--preset--spacing--50)",
+				"left": "var(--wp--preset--spacing--50)"
+			}
         },
         "typography": {
 			"fontFamily": "var(--wp--preset--font-family--sans-serif)",

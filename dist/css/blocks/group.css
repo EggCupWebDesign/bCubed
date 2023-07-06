@@ -29,19 +29,18 @@
     padding-left: var(--space-m-l);
 }
 
-.is-style-site-header,
-.is-style-site-footer {
+.is-style-header,
+.is-style-footer {
     padding-right: var(--space-2xs-xs);
     padding-left: var(--space-2xs-xs);
 }
 
-.is-style-site-header {
+.is-style-header {
     padding-top: var(--space-xs-s);
     padding-bottom: var(--space-xs-s);
-    margin-bottom: var(--space-l-xl);
 }
 
-.is-style-site-footer {
+.is-style-footer {
     padding-top: var(--space-m-l);
     padding-bottom: var(--space-m-l);
     margin-top: var(--space-xl-2xl);

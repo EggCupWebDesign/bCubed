@@ -112,15 +112,15 @@ function Define_Block_styles() {
                 'label' => __('Large Well', $Str_theme_text_domain),
                 'style' => $Str_theme_text_domain . '-group-well-lg'
             ],
-            'site-header' => [
-                'name'  => 'site-header',
-                'label' => __('Site Header', $Str_theme_text_domain),
-                'style' => $Str_theme_text_domain . '-site-header-group'
+            'header' => [
+                'name'  => 'header',
+                'label' => __('Header', $Str_theme_text_domain),
+                'style' => $Str_theme_text_domain . '-header-group'
             ],
-            'site-footer' => [
-                'name'  => 'site-footer',
-                'label' => __('Site Footer', $Str_theme_text_domain),
-                'style' => $Str_theme_text_domain . '-site-footer-group'
+            'footer' => [
+                'name'  => 'footer',
+                'label' => __('Footer', $Str_theme_text_domain),
+                'style' => $Str_theme_text_domain . '-footer-group'
             ],
         ],
         'core/list' => [
