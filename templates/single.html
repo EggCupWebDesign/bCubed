@@ -1,14 +1,20 @@
 <!-- wp:template-part {"slug":"header","tagName":"header","className":"site-header"} /-->
 
-<!-- wp:group {"tagName":"main"} -->
-<main class="wp-block-group">
-    <!-- wp:group {"tagName":"header","layout":{"inherit":true,"type":"constrained"},"className":"wp-block-post-header","className":"is-style-well-lg","backgroundColor":"primary"} -->
-    <header class="wp-block-group wp-block-post-header has-greyscale-primary-background-color is-style-well-lg">
-        <!-- wp:post-title {"level":1,"align":"wide"} /-->
-        <!-- wp:template-part {"slug":"post-meta","align":"wide"} /-->
-        <!-- wp:post-featured-image {"align":"wide"} /-->
-    </header>
-    <!-- /wp:group -->
+<!-- wp:group {"tagName":"main","style":{"spacing":{"margin":{"top":"0"}}}} -->
+<main class="wp-block-group" style="margin-top:0">
+    <!-- wp:cover {"useFeaturedImage":true,"dimRatio":50,"overlayColor":"foreground","className":"is-style-default"} -->
+    <div class="wp-block-cover is-style-default">
+        <span aria-hidden="true" class="wp-block-cover__background has-foreground-background-color has-background-dim"></span>
+        <div class="wp-block-cover__inner-container">
+            <!-- wp:group {"tagName":"header","className":"wp-block-post-header has-background-color has-background","layout":{"inherit":true,"type":"constrained"}} -->
+            <header class="wp-block-group wp-block-post-header has-background-color has-background">
+                <!-- wp:post-title {"level":1,"align":"wide"} /-->
+                <!-- wp:template-part {"slug":"post-meta","theme":"bCubed","align":"wide"} /-->
+            </header>
+            <!-- /wp:group -->
+        </div>
+    </div>
+    <!-- /wp:cover -->
 
     <!-- wp:post-content {"layout":{"inherit":true}} /-->
 

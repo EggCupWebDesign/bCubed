@@ -33,22 +33,6 @@
 }
 
 /* ----------------------------------------- *
- * Fluid Typography
- * TODO: move into SASS
- * @link https://utopia.fyi/type/calculator?c=320,20,1.2,1280,24,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l
- * ----------------------------------------- */
-:root {
-    --step--2: clamp(0.84rem, calc(0.88rem + -0.04vw), 0.87rem);
-    --step--1: clamp(1.04rem, calc(1.01rem + 0.14vw), 1.13rem);
-    --step-0: clamp(1.25rem, calc(1.17rem + 0.42vw), 1.50rem);
-    --step-1: clamp(1.50rem, calc(1.33rem + 0.83vw), 2.00rem);
-    --step-2: clamp(1.80rem, calc(1.51rem + 1.44vw), 2.67rem);
-    --step-3: clamp(2.16rem, calc(1.70rem + 2.32vw), 3.55rem);
-    --step-4: clamp(2.59rem, calc(1.88rem + 3.57vw), 4.74rem);
-    --step-5: clamp(3.11rem, calc(2.04rem + 5.34vw), 6.31rem);
-}
-
-/* ----------------------------------------- *
  * Reset and defaults
  * ----------------------------------------- */
 *,
@@ -97,15 +81,6 @@ button.wp-element-button,
     border-radius: var(--wp--custom--border--radius--sm);
     color: var(--wp--preset--color--background);
     font-weight: var(--wp--custom--font-weight--heavy);
-}
-
-/* ----------------------------------------- *
- * Layouts
- * ----------------------------------------- */
-.wp-block-post-header,
-.wp-block-post-content {
-    padding-left: var(--space-xs);
-    padding-right: var(--space-xs);
 }
 
 /* ----------------------------------------- *

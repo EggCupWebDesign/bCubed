@@ -122,6 +122,11 @@ function Define_Block_styles() {
                 'label' => __('Footer', $Str_theme_text_domain),
                 'style' => $Str_theme_text_domain . '-footer-group'
             ],
+            'section' => [
+                'name'  => 'section',
+                'label' => __('Section', $Str_theme_text_domain),
+                'style' => $Str_theme_text_domain . '-section-group'
+            ],
         ],
         'core/list' => [
             'inline' => [
