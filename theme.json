@@ -155,8 +155,8 @@
 			}
         },
         "layout": {
-            "contentSize": "48rem",
-            "wideSize": "65rem"
+            "contentSize": "50rem",
+            "wideSize": "80rem"
         },
         "spacing": {
             "blockGap": true,
@@ -226,7 +226,7 @@
             "fontStyle": true,
             "fontWeight": true,
             "letterSpacing": true,
-            "lineHeight": false,
+            "lineHeight": true,
             "textDecoration": true,
             "textTransform": true,
             "fontSizes": [
@@ -305,6 +305,31 @@
             ],
             "fontFamilies": [
                 {
+					"name": "Roboto Slab",
+                    "fontFamily": "\"Roboto Slab\", serif",
+					"slug": "heading-slab",
+                    "fontFace": [
+                        {
+                            "fontFamily": "\"Roboto Slab\"",
+                            "fontStretch": "normal",
+                            "fontStyle": "normal",
+                            "fontWeight": "400",
+                            "src": [
+                                "file:./dist/fonts/roboto-slab-v25-latin-regular.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "\"Roboto Slab\"",
+                            "fontStretch": "normal",
+                            "fontStyle": "normal",
+                            "fontWeight": "700",
+                            "src": [
+                                "file:./dist/fonts/roboto-slab-v25-latin-700.woff2"
+                            ]
+                        }
+                    ]
+                },
+                {
                     "name": "Sans Serif",
 					"fontFamily": "-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, 'Avenir Next', Avenir, 'Segoe UI', Cantarell, Ubuntu, Roboto, Oxygen-Sans, Noto, Arial, Geneva, Tahoma, Verdana, sans-serif",
 					"slug": "sans-serif"
@@ -358,15 +383,55 @@
                     }
                 }
             },
+            "core/navigation": {
+				"elements": {
+					"link": {
+						":hover": {
+                            "color": {
+                                "background": "var(--wp--preset--color--primary)",
+                                "text": "var(--wp--preset--color--background) !important"
+                            }
+						},
+						":focus": {
+							"typography": {
+								"textDecoration": "underline dashed"
+							}
+						},
+						":active": {
+							"typography": {
+								"textDecoration": "none"
+							}
+						},
+						"typography": {
+							"textDecoration": "none"
+						}
+					}
+				},
+                "spacing": {
+                    "blockGap": "var(--space-4xs-3xs)"
+                },
+                "typography": {
+					"fontSize": "var(--wp--preset--font-size--small)"
+				}
+            },
+            "core/navigation-link": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--heading-slab)"
+                }
+            },
+            "core/navigation-submenu": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--heading-slab)"
+                }
+            },
             "core/post-author": {
                 "typography": {
-                    "fontSize": "var(--wp--preset--font-size--medium)",
+                    "fontFamily": "var(--wp--preset--font-family--heading-slab)",
                     "fontWeight": "var(--wp--custom--font-weight--base)"
                 }
             },
             "core/post-date": {
                 "typography": {
-                    "fontSize": "var(--wp--preset--font-size--medium)",
                     "fontWeight": "var(--wp--custom--font-weight--base)"
                 }
             },
@@ -374,7 +439,7 @@
 				"elements": {
 					"link": {
                         "border": {
-                            "radius": "4px"
+                            "radius": "var(--wp--custom--border--radius--sm)"
                         },
 						"color": {
 				            "background": "var(--wp--preset--color--secondary)",
@@ -399,11 +464,20 @@
                     "fontSize": "var(--wp--preset--font-size--medium)"
                 }
 			},
+            "core/post-navigation-link": {
+                "typography": {
+                  "fontSize": "var(--wp--preset--font-size--small)",
+                  "fontWeight": "var(--wp--custom--font-weight--medium)"
+                }
+              },
             "core/post-terms": {
                 "spacing": {
                     "padding": {
                         "left": "var(--space-xs)"
                     }
+                },
+                "typography": {
+                    "fontSize": "var(--wp--preset--font-size--small)"
                 }
             },
             "core/preformatted": {
@@ -424,6 +498,12 @@
                         "right": "var(--space-m)"
                     }
                 }
+            },
+            "core/query-pagination": {
+                "typography": {
+                    "fontSize": "var(--wp--preset--font-size--small)",
+                    "fontWeight": "var(--wp--custom--font-weight--medium)"
+                  }
             },
             "core/quote": {
                 "border": {
@@ -461,11 +541,13 @@
                 }
             },
             "core/site-title": {
-                "border": {},
-                "color": {},
-                "elements": {},
-                "spacing": {},
-                "typography": {}
+                "elements": {
+                    "link": {
+                        "typography": {
+                            "textDecoration": "none"
+                        }
+                    }
+                }
             },
             "core/table": {
                 "spacing": {
@@ -482,18 +564,68 @@
             "background": "var(--wp--preset--color--background)"
         },
         "elements": {
+            "button": {
+				"border": {
+					"radius": "var(--wp--custom--border--radius--sm)"
+				},
+				"color": {
+					"background": "var(--wp--preset--color--secondary)",
+					"text": "var(--wp--preset--color--background)"
+				},
+				":hover": {
+					"color": {
+						"background": "var(--wp--preset--color--secondary-dark)",
+						"text": "var(--wp--preset--color--background)"
+					}
+				},
+				":focus": {
+					"color": {
+						"background": "var(--wp--preset--color--secondary-dark)",
+						"text": "var(--wp--preset--color--background)"
+					}
+				},
+				":active": {
+					"color": {
+						"background": "var(--wp--preset--color--secondary)",
+						"text": "var(--wp--preset--color--background)"
+					}
+				},
+                "typography": {
+                    "fontWeight": "var(--wp--custom--font-weight--heavy)"
+                }
+			},
             "link": {
                 "border": {},
                 "color": {
                     "background": "transparent",
                     "text": "var(--wp--preset--color--link-primary)"
                 },
+                ":hover": {
+					"typography": {
+						"textDecoration": "none"
+					}
+				},
+				":focus": {
+					"typography": {
+						"textDecoration": "underline dashed"
+					}
+				},
+				":active": {
+					"color": {
+						"text": "var(--wp--preset--color--link-tertiary)"
+					},
+					"typography": {
+						"textDecoration": "none"
+					}
+				},
                 "spacing": {},
-                "typography": {}
+                "typography": {
+					"textDecoration": "underline"
+				}
             },
             "heading": {
                 "typography": {
-                    "fontFamily": "var(--wp--preset--font-family--serif)"
+                    "fontFamily": "var(--wp--preset--font-family--heading-slab)"
                 }
             },
             "h1": {
@@ -513,14 +645,14 @@
             "h3": {
                 "typography": {
 				    "fontSize": "var(--wp--preset--font-size--large)",
-                    "fontWeight": "var(--wp--custom--font-weight--medium)",
+                    "fontWeight": "var(--wp--custom--font-weight--base)",
                     "lineHeight": "var(--wp--custom--line-height--normal)"
                 }
             },
             "h4": {
                 "typography": {
 				    "fontSize": "var(--wp--preset--font-size--medium)",
-                    "fontWeight": "var(--wp--custom--font-weight--medium)",
+                    "fontWeight": "var(--wp--custom--font-weight--base)",
                     "lineHeight": "var(--wp--custom--line-height--normal)"
                 }
             },
@@ -537,7 +669,7 @@
             "h6": {
                 "typography": {
 				    "fontSize": "var(--wp--preset--font-size--small)",
-                    "fontWeight": "var(--wp--custom--font-weight--medium)",
+                    "fontWeight": "var(--wp--custom--font-weight--light)",
                     "lineHeight": "var(--wp--custom--line-height--medium)",
                     "textTransform": "uppercase"
                 },
@@ -562,8 +694,16 @@
     },
     "customTemplates": [
         {
-            "title": "Page with empty content area",
+            "title": "Page without title",
             "name": "page-empty",
+            "postTypes": [
+                "page",
+                "post"
+            ]
+        },
+        {
+            "title": "Page with hero section",
+            "name": "page-hero",
             "postTypes": [
                 "page",
                 "post"
@@ -587,17 +727,22 @@
         {
             "title": "Post Meta",
             "name": "post-meta",
-            "area": "post-meta"
+            "area": "uncategorized"
+        },
+        {
+            "title": "Post Navigation",
+            "name": "post-navigation",
+            "area": "uncategorized"
         },
         {
             "title": "Post Terms",
             "name": "post-terms",
-            "area": "post-terms"
+            "area": "uncategorized"
         },
         {
             "title": "Query Pagination",
             "name": "query-pagination",
-            "area": "query-pagination"
+            "area": "uncategorized"
         }
     ]
 }

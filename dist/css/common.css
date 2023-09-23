@@ -35,17 +35,17 @@
 /* ----------------------------------------- *
  * Reset and defaults
  * ----------------------------------------- */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
+address {
+    font-style: normal;
 }
 
 /* ----------------------------------------- *
- * HTML Elements
+ * Block Foundations
  * ----------------------------------------- */
-address {
-    font-style: normal;
+ .wp-site-blocks {
+    max-width: var(--wp--style--global--wide-size);
+    margin: 0 auto;
+    background: var(--wp--preset--color--background);
 }
 
 /* ----------------------------------------- *
@@ -56,7 +56,7 @@ address {
 }
 
 .wp-block-navigation .wp-block-navigation-item__content {
-    padding: var(--space-3xs-2xs) var(--space-2xs-xs);
+    padding: var(--space-3xs-2xs);
 }
 
 .wp-block-navigation__responsive-container:not(.is-menu-open) .current-menu-item.wp-block-navigation-link a,
@@ -67,20 +67,24 @@ address {
     background: var(--wp--preset--color--primary);
 }
 
+/** Navigation menu burger button: **/
 .wp-block-navigation__responsive-container-open {
-    padding: var(--space-2xs);
+    padding: var(--wp--preset--spacing--20);
 }
 
-/* ----------------------------------------- *
- * Buttons
- * ----------------------------------------- */
-button.wp-element-button,
-.wp-block-button .wp-block-button__link {
-    border: none;
-    background-color: var(--wp--preset--color--secondary);
-    border-radius: var(--wp--custom--border--radius--sm);
-    color: var(--wp--preset--color--background);
-    font-weight: var(--wp--custom--font-weight--heavy);
+/** Responsive menu dialogue container: **/
+.has-modal-open .is-menu-open .wp-block-navigation__responsive-dialog {
+    margin-top: var(--wp--preset--spacing--60);
+    margin-bottom: var(--wp--preset--spacing--80);
+}
+
+/** Gap between menu items inside responsive menu: **/
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__container {
+    gap: var(--space-s-m);
+}
+
+.wp-block-navigation-submenu .wp-block-navigation-link {
+    font-size: var(--wp--preset--font-size--tiny);
 }
 
 /* ----------------------------------------- *

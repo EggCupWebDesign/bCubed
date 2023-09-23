@@ -102,6 +102,11 @@ function Define_Block_styles() {
                 'label' => __('CTA', $Str_theme_text_domain),
                 'style' => $Str_theme_text_domain . '-group-cta'
             ],
+            'well-sm' => [
+                'name'  => 'well-sm',
+                'label' => __('Small Well', $Str_theme_text_domain),
+                'style' => $Str_theme_text_domain . '-group-well-sm'
+            ],
             'well' => [
                 'name'  => 'well',
                 'label' => __('Well', $Str_theme_text_domain),

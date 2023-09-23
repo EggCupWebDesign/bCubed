@@ -19,9 +19,9 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-$includes_dir   = get_template_directory() . '/inc/';
+$Str_includes_path   = get_template_directory() . '/inc/';
 
 /**
  * Set up theme features, enqueue and dequeue CSS and JS:
  */
-require_once $includes_dir . 'theme-bootstrap.inc.php';
+require_once $Str_includes_path . 'theme-bootstrap.inc.php';

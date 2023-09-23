@@ -1,15 +1,16 @@
-<!-- wp:template-part {"slug":"header","tagName":"header","className":"site-header"} /-->
+<!-- wp:template-part {"slug":"header","theme":"bCubed","tagName":"header","className":"site-header"} /-->
 
 <!-- wp:group {"tagName":"main","style":{"spacing":{"margin":{"top":"0"}}}} -->
 <main class="wp-block-group" style="margin-top:0">
-    <!-- wp:cover {"useFeaturedImage":true,"dimRatio":50,"overlayColor":"foreground","className":"is-style-default"} -->
-    <div class="wp-block-cover is-style-default">
-        <span aria-hidden="true" class="wp-block-cover__background has-foreground-background-color has-background-dim"></span>
+    <!-- wp:cover {"useFeaturedImage":true,"dimRatio":40,"overlayColor":"foreground","className":"is-style-default"} -->
+    <div class="wp-block-cover is-style-default"><span aria-hidden="true"
+            class="wp-block-cover__background has-foreground-background-color has-background-dim-40 has-background-dim"></span>
         <div class="wp-block-cover__inner-container">
             <!-- wp:group {"tagName":"header","className":"wp-block-post-header has-background-color has-background","layout":{"inherit":true,"type":"constrained"}} -->
             <header class="wp-block-group wp-block-post-header has-background-color has-background">
                 <!-- wp:post-title {"level":1,"align":"wide"} /-->
-                <!-- wp:template-part {"slug":"post-meta","theme":"bCubed","align":"wide"} /-->
+
+                <!-- wp:template-part {"slug":"post-meta","theme":"bCubed","area":"uncategorized","align":"wide"} /-->
             </header>
             <!-- /wp:group -->
         </div>
@@ -18,19 +19,12 @@
 
     <!-- wp:post-content {"layout":{"inherit":true}} /-->
 
-    <!-- wp:group {"layout":{"inherit":true}} -->
-    <div class="wp-block-group">
-        <!-- wp:template-part {"slug":"post-terms"} /-->
-    </div>
+    <!-- wp:group {"layout":{"inherit":true,"type":"constrained"}} -->
+    <div class="wp-block-group"><!-- wp:template-part {"slug":"post-terms","theme":"bCubed"} /--></div>
     <!-- /wp:group -->
 
-    <!-- wp:group {"layout":{"inherit":true}} -->
-    <div class="wp-block-group">
-        <!-- wp:post-navigation-link {"type":"previous"} /-->
-        <!-- wp:post-navigation-link /-->
-    </div>
-    <!-- /wp:group -->
+    <!-- wp:template-part {"slug":"post-navigation","theme":"bCubed","area":"uncategorized"} /-->
 </main>
 <!-- /wp:group -->
 
-<!-- wp:template-part {"slug":"footer","tagName":"footer","className":"site-footer"} /-->
+<!-- wp:template-part {"slug":"footer","theme":"bCubed","tagName":"footer","className":"site-footer"} /-->
