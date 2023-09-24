@@ -83,10 +83,6 @@ address {
     gap: var(--space-s-m);
 }
 
-.wp-block-navigation-submenu .wp-block-navigation-link {
-    font-size: var(--wp--preset--font-size--tiny);
-}
-
 /* ----------------------------------------- *
  * Global Utility Classes
  * ----------------------------------------- */

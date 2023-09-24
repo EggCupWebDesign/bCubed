@@ -55,10 +55,15 @@
     padding-bottom: var(--space-m-l);
     margin-top: var(--space-xl-2xl);
     font-size: 80%;
+    line-height: var(--wp--custom--line-height--base);
 }
 
 body .is-style-footer .is-layout-flow > * + * {
     margin-block-start: var(--space-3xs-2xs);
+}
+
+.site-footer .wp-block-site-title {
+    display: inline;
 }
 
 .wp-block-group.is-style-section {

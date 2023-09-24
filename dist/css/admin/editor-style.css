@@ -165,6 +165,7 @@ label {
     padding-bottom: var(--space-m-l);
     margin-top: var(--space-xl-2xl);
     font-size: 80%;
+    line-height: var(--wp--custom--line-height--base);
 }
 
 body .is-style-footer .is-layout-flow > * + * {

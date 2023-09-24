@@ -53,6 +53,11 @@ function Theme_bootstrap()
     remove_theme_support('automatic-feed-links');
 
     /**
+     * Remove core block patterns as we have our own:
+     */
+    remove_theme_support('core-block-patterns');
+
+    /**
      * Add excerpt support to pages:
      */
     add_post_type_support('page', 'excerpt');
