@@ -41,6 +41,11 @@
             ],
             "palette": [
                 {
+                    "name": "Transparent",
+                    "slug": "transparent",
+                    "color": "transparent"
+                },
+                {
                     "name": "Off White",
                     "color": "#f7f7f7",
                     "slug": "background"
