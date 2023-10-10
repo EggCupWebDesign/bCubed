@@ -111,17 +111,17 @@
 					"color": "#1e250c"
 				},
                 {
-                    "name": "Link Blue",
+                    "name": "Link Primary",
                     "color": "#0820A1",
                     "slug": "link-primary"
                 },
                 {
-                    "name": "Link Light Blue",
+                    "name": "Link Secondary",
                     "color": "#564ad3",
                     "slug": "link-secondary"
                 },
                 {
-                    "name": "Link Dark Blue",
+                    "name": "Link Tertiary",
                     "color": "#000071",
                     "slug": "link-tertiary"
                 }
@@ -393,7 +393,7 @@
 						},
 						":focus": {
 							"typography": {
-								"textDecoration": "underline dashed"
+								"textDecoration": "underline"
 							}
 						},
 						":active": {
@@ -626,30 +626,34 @@
                 }
 			},
             "link": {
-                "border": {},
                 "color": {
                     "background": "transparent",
                     "text": "var(--wp--preset--color--link-primary)"
                 },
                 ":hover": {
-					"typography": {
-						"textDecoration": "none"
-					}
-				},
-				":focus": {
-					"typography": {
-						"textDecoration": "underline dashed"
-					}
-				},
-				":active": {
-					"color": {
-						"text": "var(--wp--preset--color--link-tertiary)"
+                    "color": {
+						"text": "var(--wp--preset--color--link-secondary)"
 					},
 					"typography": {
 						"textDecoration": "none"
 					}
 				},
-                "spacing": {},
+				":focus": {
+                    "color": {
+						"text": "var(--wp--preset--color--link-secondary)"
+					},
+					"typography": {
+						"textDecoration": "underline"
+					}
+				},
+				":active": {
+					"color": {
+						"text": "var(--wp--preset--color--link-secondary)"
+					},
+					"typography": {
+						"textDecoration": "none"
+					}
+				},
                 "typography": {
 					"textDecoration": "underline"
 				}

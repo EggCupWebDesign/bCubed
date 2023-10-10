@@ -67,6 +67,10 @@ address {
     background: var(--wp--preset--color--primary);
 }
 
+.wp-block-navigation__responsive-container:not(.is-menu-open) .current-menu-item.wp-block-navigation-link a {
+    font-weight: var(--wp--custom--font-weight--medium);
+}
+
 /** Navigation menu burger button: **/
 .wp-block-navigation__responsive-container-open {
     padding: var(--wp--preset--spacing--20);
