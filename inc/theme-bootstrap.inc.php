@@ -89,6 +89,13 @@ function Define_Block_styles() {
      * keyed on the name of the custom block style:
      */
     $Arr_custom_block_styles = [
+        'core/button' => [
+            'primary' => [
+                'name'  => 'primary',
+                'label' => __('Primary', $Str_theme_text_domain),
+                'style' => $Str_theme_text_domain . '-button-primary'
+            ]
+        ],
         'core/cover' => [
             'hero' => [
                 'name'  => 'cover-hero',
@@ -174,6 +181,7 @@ function Enqueue_Block_styles()
     $Str_block_css_path = 'dist/css/blocks/';
     $Arr_styled_blocks = [
         'core' => [
+            'button',
             'cover',
             'group',
             'image',

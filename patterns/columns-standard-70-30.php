@@ -39,8 +39,8 @@
 
     <!-- wp:column {"width":"30%"} -->
     <div class="wp-block-column" style="flex-basis:30%">
-        <!-- wp:group {"backgroundColor":"greyscale-primary","className":"is-style-well-sm","layout":{"type":"default"}} -->
-        <div class="wp-block-group is-style-well-sm has-greyscale-primary-background-color has-background">
+        <!-- wp:group {"backgroundColor":"greyscale-primary","className":"is-style-well","layout":{"type":"default"}} -->
+        <div class="wp-block-group is-style-well has-greyscale-primary-background-color has-background">
             <!-- wp:heading {"fontSize":"medium"} -->
             <h2 class="wp-block-heading has-medium-font-size">Secondary content: 30%</h2>
             <!-- /wp:heading -->

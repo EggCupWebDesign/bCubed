@@ -80,6 +80,10 @@ address {
     padding: var(--space-2xs);
 }
 
+.wp-block-post-terms__prefix {
+    font-weight: var(--wp--custom--font-weight--base);
+}
+
 /* ----------------------------------------- *
  * Custom Block Styles
  * @link https://fullsiteediting.com/lessons/custom-block-styles/
@@ -182,6 +186,19 @@ body .is-style-footer .is-layout-flow > * + * {
 }
 
 /* ----------------------------------------- *
+ * Buttons - block styles in button.css
+ * ----------------------------------------- */
+ .is-style-primary .wp-element-button, 
+ .is-style-primary .wp-block-button__link {
+     background-color: var(--wp--preset--color--primary-dark);
+ }
+ 
+ .is-style-primary .wp-element-button:hover,
+ .is-style-primary .wp-block-button__link:hover {
+     background-color: var(--wp--preset--color--primary);
+ }
+
+/* ----------------------------------------- *
  * Cover Images - block styles in cover.css
  * ----------------------------------------- */
 .wp-block-cover:not(.is-style-cover-hero) {
@@ -245,24 +262,16 @@ body .is-layout-constrained>.wp-block-cover:not(.is-style-cover-hero) {
 /* ----------------------------------------- *
  * Quotes - block styles in quote.css
  * ----------------------------------------- */
-blockquote cite {
-    padding-right: var(--space-xs);
-    padding-left: var(--space-xs);
-    font-size: var(--wp--preset--font-size--small);
+.wp-block-quote p {
+    margin-top: 0;
+    margin-bottom: var(--space-2xs-xs);
+    font-style: italic;
 }
 
 /* ----------------------------------------- *
  * Pullquotes - block styles in pullquote.css
  * ----------------------------------------- */
-.wp-block-pullquote blockquote {
-    margin: var(--space-s);
-}
 
-.wp-block-pullquote cite {
-    padding-right: var(--space-xs);
-    padding-left: var(--space-xs);
-    font-size: var(--wp--preset--font-size--normal);
-}
 
 /* ----------------------------------------- *
  * Tables - block styles in table.css

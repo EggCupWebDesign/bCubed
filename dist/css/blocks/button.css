@@ -1,0 +1,9 @@
+.is-style-primary .wp-element-button, 
+.is-style-primary .wp-block-button__link {
+    background-color: var(--wp--preset--color--primary-dark);
+}
+
+.is-style-primary .wp-element-button:hover,
+.is-style-primary .wp-block-button__link:hover {
+    background-color: var(--wp--preset--color--primary);
+}
