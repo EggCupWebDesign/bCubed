@@ -9,7 +9,7 @@
  *
  * @category   Includes
  * @package    b3
- * @author     Ian Pegg <ian@eggcupweb.com>
+ * @author     Ian Pegg <hello@eggcupweb.com>
  * @license    GNU/GPLv3 https://www.gnu.org/licenses/gpl-3.0.txt
  * @link       https://eggcupwebdesign.com
  */
