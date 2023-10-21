@@ -30,7 +30,7 @@
             "gradients": [
                 {
                     "name": "Black to white",
-                    "gradient": "linear-gradient(135deg, var(--wp--preset--color--foreground), var(--wp--preset--color--pure-white))",
+                    "gradient": "linear-gradient(135deg, var(--wp--preset--color--foreground), var(--wp--preset--color--white))",
                     "slug": "black-to-white"
                 },
                 {
@@ -143,12 +143,12 @@
                 "heavy": "800"
             },
             "line-height": {
-                "base": 1.35,
-                "tiny": "var(--space-xs-s)",
-                "small": "var(--space-s)",
-                "normal": "var(--space-m)",
-                "medium": "var(--space-m-l)",
-                "large": "var(--space-xl-2xl)"
+                "base": 1.333,
+                "tiny": 1.067,
+                "small": 1.125,
+                "normal": 1.25,
+                "medium": 1.414,
+                "large": 1.5
             }
         },
         "layout": {
@@ -327,19 +327,79 @@
                     ]
                 },
                 {
-                    "name": "Sans Serif",
-					"fontFamily": "-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, 'Avenir Next', Avenir, 'Segoe UI', Cantarell, Ubuntu, Roboto, Oxygen-Sans, Noto, Arial, Geneva, Tahoma, Verdana, sans-serif",
-					"slug": "sans-serif"
-				},
-                {
-                    "name": "Serif",
-                    "fontFamily": "'Iowan Old Style', 'Apple Garamond', Baskerville, 'Droid Serif', 'Source Serif Pro', 'Times New Roman', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', Cambria, Georgia, Times, serif",
-			        "slug": "serif"
+                    "fontFamily": "system-ui, sans-serif",
+                    "name": "System UI",
+                    "slug": "system-ui"
                 },
                 {
-                    "name": "Mono",
-                    "fontFamily": "Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;",
-			        "slug": "mono"
+                    "fontFamily": "Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif",
+                    "name": "Transitional",
+                    "slug": "transitional"
+                },
+                {
+                    "fontFamily": "'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif",
+                    "name": "Old Style",
+                    "slug": "old-style"
+                },
+                {
+                    "fontFamily": "Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif",
+                    "name": "Humanist",
+                    "slug": "humanist"
+                },
+                {
+                    "fontFamily": "Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif",
+                    "name": "Geometric Humanist",
+                    "slug": "geometric-humanist"
+                },
+                {
+                    "fontFamily": "Optima, Candara, 'Noto Sans', source-sans-pro, sans-serif",
+                    "name": "Classical Humanist",
+                    "slug": "classical-humanist"
+                },
+                {
+                    "fontFamily": "Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif",
+                    "name": "Neo-Grotesque",
+                    "slug": "neo-grotesque"
+                },
+                {
+                    "fontFamily": "'Nimbus Mono PS', 'Courier New', monospace",
+                    "name": "Monospace Slab Serif",
+                    "slug": "monospace-slab-serif"
+                },
+                {
+                    "fontFamily": "ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace",
+                    "name": "Monospace Code",
+                    "slug": "monospace-code"
+                },
+                {
+                    "fontFamily": "Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif",
+                    "name": "Industrial",
+                    "slug": "industrial"
+                },
+                {
+                    "fontFamily": "ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif",
+                    "name": "Rounded Sans",
+                    "slug": "rounded-sans"
+                },
+                {
+                    "fontFamily": "Rockwell, 'Rockwell Nova', 'Roboto Slab', 'DejaVu Serif', 'Sitka Small', serif",
+                    "name": "Slab Serif",
+                    "slug": "slab-serif"
+                },
+                {
+                    "fontFamily": "Superclarendon, 'Bookman Old Style', 'URW Bookman', 'URW Bookman L', 'Georgia Pro', Georgia, serif",
+                    "name": "Antique",
+                    "slug": "antique"
+                },
+                {
+                    "fontFamily": "Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif",
+                    "name": "Didone",
+                    "slug": "didone"
+                },
+                {
+                    "fontFamily": "'Segoe Print', 'Bradley Hand', Chilanka, TSCu_Comic, casual, cursive",
+                    "name": "Handwritten",
+                    "slug": "handwritten"
                 }
             ]
         }
