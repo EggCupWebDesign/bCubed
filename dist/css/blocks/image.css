@@ -1,13 +1,5 @@
 .wp-block-image figcaption {
-    margin-top: 0;
-    padding-top: var(--space-2xs-xs);
-    padding-right: var(--space-xs);
-    padding-bottom: var(--space-2xs-xs);
-    padding-left: var(--space-xs);
-    color: var(--wp--preset--color--foreground);
-    background-color: antiquewhite;
-    font-size: var(--wp--preset--font-size--medium);
-    font-weight: var(--wp--custom--font-weight--base);
+    text-align: center;
 }
 
 .fixed-dimensions img {

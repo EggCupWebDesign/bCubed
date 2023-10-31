@@ -21,7 +21,7 @@
 .wp-block-group.is-style-well-sm {
     margin-top: var(--space-xs-s);
     margin-bottom: var(--space-xs-s);
-    padding: var(--space-3xs-2xs);
+    padding: var(--space-2xs-xs);
 }
 
 .wp-block-group.is-style-well-sm > * + * {
@@ -29,7 +29,11 @@
 }
 
 .wp-block-group.is-style-well {
-    padding: var(--space-xs-s) var(--space-xs-s);
+    padding: var(--space-xs-s);
+}
+
+.wp-block-group.is-style-well > * + * {
+    margin-block-start: var(--space-xs-s);
 }
 
 .wp-block-group.is-style-well-lg {

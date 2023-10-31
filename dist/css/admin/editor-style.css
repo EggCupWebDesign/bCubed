@@ -27,9 +27,9 @@
     --space-2xl-3xl: clamp(5.00rem, calc(3.67rem + 6.67vw), 9.00rem);
 
     /* Custom pairs */
-    --space-s-l: clamp(1.25rem, calc(0.67rem + 2.92vw), 3.00rem);
-    --space-xs-4xs: clamp(0.00rem, calc(1.33rem + -1.67vw), 1.00rem);
+    --space-4xs-xs: clamp(0.00rem, calc(1.33rem + -1.67vw), 1.00rem);
     --space-xs-m: clamp(1.00rem, calc(0.58rem + 2.08vw), 2.25rem);
+    --space-s-l: clamp(1.25rem, calc(0.67rem + 2.92vw), 3.00rem);
 }
 
 /* ----------------------------------------- *
@@ -37,6 +37,15 @@
  * ----------------------------------------- */
 address {
     font-style: normal;
+}
+
+/**
+ * Prevent long URLs from breaking layout:
+ * @link https://getbootstrap.com/docs/5.0/utilities/text/#word-break
+ */
+ a {
+    word-wrap: break-word;
+    word-break: break-word;
 }
 
 /* ----------------------------------------- *
@@ -139,7 +148,7 @@ label {
 .wp-block-group.is-style-well-sm {
     margin-top: var(--space-xs-s);
     margin-bottom: var(--space-xs-s);
-    padding: var(--space-3xs-2xs);
+    padding: var(--space-2xs-xs);
 }
 
 .wp-block-group.is-style-well-sm > * + * {
@@ -147,7 +156,11 @@ label {
 }
 
 .wp-block-group.is-style-well {
-    padding: var(--space-xs-s) var(--space-xs-s);
+    padding: var(--space-xs-s);
+}
+
+.wp-block-group.is-style-well > * + * {
+    margin-block-start: var(--space-xs-s);
 }
 
 .wp-block-group.is-style-well-lg {
@@ -227,19 +240,12 @@ body .is-layout-constrained>.wp-block-cover:not(.is-style-cover-hero) {
     margin-bottom: var(--space-m);
 }
 
+
 /* ----------------------------------------- *
  * Inline Images - block styles in image.css
  * ----------------------------------------- */
 .wp-block-image figcaption {
-    margin-top: 0;
-    padding-top: var(--space-2xs-xs);
-    padding-right: var(--space-xs);
-    padding-bottom: var(--space-2xs-xs);
-    padding-left: var(--space-xs);
-    color: var(--wp--preset--color--foreground);
-    background-color: antiquewhite;
-    font-size: var(--wp--preset--font-size--medium);
-    font-weight: var(--wp--custom--font-weight--base);
+    text-align: center;
 }
 
 .fixed-dimensions img {
@@ -247,16 +253,17 @@ body .is-layout-constrained>.wp-block-cover:not(.is-style-cover-hero) {
     width: 100%;
 }
 
+
 /* ----------------------------------------- *
  * Lists - block styles in list.css
  * ----------------------------------------- */
- .is-style-list-unstyled,
- .is-style-list-inline {
-     padding-left: 0;
-     list-style: none;
- }
- .is-style-list-inline li { display: inline-block; }
- .is-style-list-inline li:not(:last-child) { margin-right: var(--space-xs); }
+.is-style-list-unstyled,
+.is-style-list-inline {
+    padding-left: 0;
+    list-style: none;
+}
+.is-style-list-inline li { display: inline-block; }
+.is-style-list-inline li:not(:last-child) { margin-right: var(--space-xs); }
  
 
 /* ----------------------------------------- *

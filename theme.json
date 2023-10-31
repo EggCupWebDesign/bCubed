@@ -406,14 +406,6 @@
     },
     "styles": {
         "blocks": {
-            "contact-form-7/contact-form-selector": {
-                "spacing": {
-                    "padding": {
-                        "left": "var(--space-xs-4xs)",
-                        "right": "var(--space-xs-4xs)"
-                    }
-                }
-            },
             "core/button": {
                 "spacing": {
                     "padding": {
@@ -439,6 +431,30 @@
                         "right": "var(--space-s-m)",
                         "bottom": "var(--space-s-m)",
                         "left": "var(--space-s-m)"
+                    }
+                }
+            },
+            "core/image": {
+                "elements": {
+                    "caption": {
+                        "color": {
+                            "text": "var(--wp--preset--color--background)",
+                            "background": "var(--wp--preset--color--greyscale-quinary)"
+                        },
+                        "spacing": {
+                            "margin": {
+                                "top": "0"
+                            },
+                            "padding": {
+                                "top": "var(--space-2xs-xs)",
+                                "right": "var(--space-xs)",
+                                "bottom": "var(--space-2xs-xs)",
+                                "left": "var(--space-xs)"
+                            }
+                        },
+                        "typography": {
+                            "fontSize": "var(--wp--preset--font-size--small)"
+                        }
                     }
                 }
             },
@@ -475,6 +491,29 @@
 				}
             },
             "core/navigation-link": {
+                "elements": {
+                    "link": {
+                        ":hover": {
+                            "color": {
+                                "background": "var(--wp--preset--color--primary-dark)",
+                                "text": "var(--wp--preset--color--background) !important"
+                            }
+                        },
+                        ":focus": {
+                            "typography": {
+                                "textDecoration": "underline"
+                            }
+                        },
+                        ":active": {
+                            "typography": {
+                                "textDecoration": "none"
+                            }
+                        },
+                        "typography": {
+                            "textDecoration": "none"
+                        }
+                    }
+                },
                 "typography": {
                     "fontFamily": "var(--wp--preset--font-family--heading-slab)"
                 }
