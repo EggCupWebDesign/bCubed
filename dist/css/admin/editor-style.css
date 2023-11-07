@@ -248,11 +248,6 @@ body .is-layout-constrained>.wp-block-cover:not(.is-style-cover-hero) {
     text-align: center;
 }
 
-.fixed-dimensions img {
-    object-fit: cover;
-    width: 100%;
-}
-
 
 /* ----------------------------------------- *
  * Lists - block styles in list.css

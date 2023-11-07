@@ -447,13 +447,13 @@
                             },
                             "padding": {
                                 "top": "var(--space-2xs-xs)",
-                                "right": "var(--space-xs)",
+                                "right": "var(--space-2xs-xs)",
                                 "bottom": "var(--space-2xs-xs)",
-                                "left": "var(--space-xs)"
+                                "left": "var(--space-2xs-xs)"
                             }
                         },
                         "typography": {
-                            "fontSize": "var(--wp--preset--font-size--small)"
+                            "fontSize": "var(--wp--preset--font-size--small) !important"
                         }
                     }
                 }
@@ -826,8 +826,8 @@
         "spacing": {
             "blockGap": "var(--space-s-m)",
             "padding": {
-				"right": "var(--wp--preset--spacing--40)",
-				"left": "var(--wp--preset--spacing--40)"
+				"right": "var(--space-s-m)",
+				"left": "var(--space-s-m)"
 			}
         },
         "typography": {
@@ -839,7 +839,7 @@
     },
     "customTemplates": [
         {
-            "title": "Page without title",
+            "title": "No primary heading",
             "name": "page-empty",
             "postTypes": [
                 "page",
@@ -847,16 +847,29 @@
             ]
         },
         {
-            "title": "Page with hero section",
+            "title": "Zero top margin",
+            "name": "page-zero",
+            "postTypes": [
+                "page"
+            ]
+        },
+        {
+            "title": "Hero featured image",
             "name": "page-hero",
             "postTypes": [
-                "page",
+                "page"
+            ]
+        },
+        {
+            "title": "Hero featured image",
+            "name": "single-hero",
+            "postTypes": [
                 "post"
             ]
         },
         {
-            "title": "Post with hero featured image",
-            "name": "single-hero",
+            "title": "Hero featured image",
+            "name": "archive-hero",
             "postTypes": [
                 "post"
             ]
@@ -889,11 +902,6 @@
         {
             "title": "Post Terms",
             "name": "post-terms",
-            "area": "uncategorized"
-        },
-        {
-            "title": "Query Pagination",
-            "name": "query-pagination",
             "area": "uncategorized"
         }
     ]

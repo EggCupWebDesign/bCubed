@@ -5,11 +5,10 @@ label {
 }
 
 .wp-block-search__input {
-    font-size: var(--step-2);
+    font-size: var(--wp--preset--font-size--medium);
 }
 
-.wp-block-query-no-results,
-.wp-block-post-template .wp-block-post {
+.wp-block-query-no-results {
     background-color: var(--wp--preset--color--greyscale-primary);
     margin-top: var(--space-s-m);
     margin-bottom: var(--space-s-m);

@@ -1,8 +1,3 @@
 .wp-block-image figcaption {
     text-align: center;
 }
-
-.fixed-dimensions img {
-    object-fit: cover;
-    width: 100%;
-}

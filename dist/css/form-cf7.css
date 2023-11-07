@@ -62,16 +62,10 @@ fieldset {
 }
 
 legend {
-    float: left;
+    font-size: var(--wp--preset--font-size--medium);
+    font-weight: var(--wp--custom--font-weight--heavy);
     width: 100%;
-    padding: 0;
-    margin-bottom: 0.5rem;
-    font-size: var(--wp--custom--font-size--medium);
-    line-height: inherit;
-}
-
-legend+* {
-    clear: left;
+    border-bottom: 1px solid var(--wp--preset--color--greyscale-secondary);
 }
 
 ::-webkit-inner-spin-button {
@@ -87,6 +81,7 @@ legend+* {
 /* ----------------------------------------- *
  * Generic form styling
  * ----------------------------------------- */
+fieldset,
 .form-group,
 .form-help-block {
     margin-block-start: var(--wp--style--block-gap);
@@ -134,7 +129,7 @@ label {
 }
 
 label.required {
-    font-weight: var(--wp--custom--font-weight--heavy);
+    font-weight: var(--wp--custom--font-weight--medium);
 }
 
 label.required:after {

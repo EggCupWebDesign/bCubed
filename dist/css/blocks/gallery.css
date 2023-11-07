@@ -1,0 +1,9 @@
+.wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
+    position: initial;
+    width: 100%;
+    max-height: 100%;
+    padding: var(--space-3xs-2xs) !important;
+    color: var(--wp--preset--color--greyscale-quinary);
+    background: none;
+    background-color: var(--wp--preset--color--background);
+}
