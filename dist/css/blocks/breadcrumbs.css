@@ -1,0 +1,7 @@
+.yoast-breadcrumbs {
+    font-size: var(--wp--preset--font-size--tiny);
+}
+
+.yoast-breadcrumbs .separator {
+    vertical-align: text-bottom;
+}

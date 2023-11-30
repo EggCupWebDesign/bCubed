@@ -26,7 +26,7 @@ if (!defined('ABSPATH')) {
 add_action('after_setup_theme', __NAMESPACE__ . '\\Theme_bootstrap');
 add_action('after_setup_theme', __NAMESPACE__ . '\\Define_Block_styles');
 add_action('after_setup_theme', __NAMESPACE__ . '\\Enqueue_Block_styles');
-add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\Enqueue_Common_styles');
+add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\Load_Static_resources');
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\Dequeue_assets', 9999);
 add_action('enqueue_block_assets', __NAMESPACE__ . '\\Enqueue_Override_styles');
 add_action('enqueue_block_editor_assets', __NAMESPACE__ . '\\Enqueue_Block_Editor_assets');
@@ -61,6 +61,11 @@ function Theme_bootstrap()
      * Add excerpt support to pages:
      */
     add_post_type_support('page', 'excerpt');
+
+    /**
+     * Re-enable the theme customizer:
+     */
+    add_action('customize_register', '__return_true');
 
     /**
      * Remove <p> and <br/> from Contact Form 7:
@@ -191,6 +196,12 @@ function Enqueue_Block_styles()
             'quote',
             'search',
             'table'
+        ],
+        'yoast' => [
+            'how-to-block'
+        ],
+        'yoast-seo' => [
+            'breadcrumbs'
         ]
     ];
 
@@ -211,21 +222,145 @@ function Enqueue_Block_styles()
 
 
 /**
- * Enqueue the custom theme common.css file
- * ---
- * TODO: Break this down into block CSS and enqueue using Enqueue_Block_styles
- * wherever possible.
+ * Triggers the enqueuing of CSS and JS assets.
  *
- * @return null
+ * @return void
  */
-function Enqueue_Common_styles()
+function Load_Static_resources()
 {
-	wp_enqueue_style(
-		wp_get_theme()->get('TextDomain') . '-theme-styles',
-		get_stylesheet_directory_uri() . '/dist/css/common.css',
-		[],
-		wp_get_theme()->get('Version')
-	);
+    // Enqueue stylesheets
+    Enqueue_assets(Define_Style_registrations(), 'styles');
+
+    // Enqueue scripts
+    Enqueue_assets(Define_Script_registrations(), 'scripts');
+}
+
+
+/**
+ * Returns an array of stylesheets that are to be registered with
+ * core, complete with the appropriate settings.
+ *
+ * @return Array Defined stylesheets, with settings.
+ */
+function Define_Style_registrations()
+{
+    $Str_theme_css_path = '/dist/css/';
+    $Str_text_domain = wp_get_theme()->get('TextDomain');
+
+    $Arr_enqueue_styles = [
+        $Str_text_domain . '-theme-styles' => [
+            'path'          => $Str_theme_css_path . 'common.css',
+            'dependencies'  => [],
+            'options'       => 'all',
+        ]
+    ];
+
+    if (is_user_logged_in()) {
+        $Arr_enqueue_styles[ $Str_text_domain . '-admin-styles' ] = [
+            'path' => $Str_theme_css_path . 'admin/logged-in.css',
+            'dependencies'  => [ $Str_text_domain . '-theme-styles' ],
+            'options'       => 'all',
+        ];
+    }
+
+    return $Arr_enqueue_styles;
+}
+
+
+/**
+ * Returns an array of stylesheets that are to be registered with
+ * core, complete with the appropriate settings.
+ *
+ * @return Array Defined stylesheets, with settings.
+ */
+function Define_Script_registrations()
+{
+    $Str_theme_js_path = '/dist/js/';
+    
+    $Arr_enqueue_scripts = [
+        'app' => [
+            'path'          => $Str_theme_js_path . 'app.js',
+            'dependencies'  => [],
+            'options'       => [ 'strategy' => 'defer' ]
+        ]
+    ];
+
+    return $Arr_enqueue_scripts;
+}
+
+
+/**
+ * Accepts a multidimensional array of assets to enqueue, then calls
+ * either wp_enqueue_style or wp_enqueue_script via a callback
+ * function, according to whether an array of styles or an array
+ * of scripts was provided.
+ *
+ * Also handles cachebusting by checking filemtimes of assets.
+ *
+ * @param Array  $Arr_enqueue_list List of assets to enqueue
+ * @param String $Str_type         Type of assets being enqueued (scripts or styles)
+ *
+ * @return void
+ */
+function Enqueue_assets( $Arr_enqueue_list = [], $Str_type = 'styles' )
+{
+    if (!empty($Arr_enqueue_list)) {
+        $Str_library_root   = get_stylesheet_directory();
+        $Str_library_uri    = get_stylesheet_directory_uri();
+
+        if ('styles' === $Str_type) {
+            $Call_function      = 'wp_enqueue_style';
+            $Str_library_dir    = '';
+        } else {
+            $Call_function      = 'wp_enqueue_script';
+            $Str_library_dir    = '';
+        }
+
+        foreach ($Arr_enqueue_list as $Str_handle => $Arr_properties) {
+            $Str_modified_time = '';
+
+            /**
+             * If the path validates as a URL with a path then it is an external resource.
+             * Simply use the URL once validated:
+             */
+            $Str_asset_uri = filter_var(
+                $Arr_properties[ 'path' ],
+                FILTER_VALIDATE_URL,
+                FILTER_FLAG_PATH_REQUIRED
+            );
+
+            /**
+             * If it's not a valid URL, filter_var will return false,
+             * so build our internal URL instead:
+             */
+            if (!$Str_asset_uri) {
+                $Str_full_path
+                    = $Str_library_root
+                    . $Str_library_dir
+                    . $Arr_properties[ 'path' ];
+
+                if (file_exists($Str_full_path)) {
+                    $Str_modified_time = filemtime($Str_full_path);
+
+                    $Str_asset_uri
+                        = $Str_library_uri
+                        . $Str_library_dir
+                        . $Arr_properties[ 'path' ];
+                }
+            }
+
+            /**
+             * Finally, call the appropriate WP asset registration function:
+             */
+            $Call_function(
+                $Str_handle,
+                $Str_asset_uri,
+                $Arr_properties[ 'dependencies' ],
+                $Str_modified_time,
+                $Arr_properties[ 'options' ]
+            );
+        }
+    }
 }
 
 
@@ -308,6 +443,5 @@ function Dequeue_assets()
          */
         wp_dequeue_style('contact-form-7');
         wp_dequeue_script('contact-form-7');
-        wp_dequeue_script('gtm4wp-contact-form-7-tracker');
     }
 }

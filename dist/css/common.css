@@ -118,8 +118,3 @@ a {
 .has-heavy-font-weight {
     font-weight: var(--wp--custom--font-weight--heavy)
 }
-
-.block-width__100 {
-    width: 100%;
-    flex-basis: 100%;
-}

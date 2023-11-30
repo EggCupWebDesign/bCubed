@@ -1,0 +1,19 @@
+.schema-how-to-duration-time-text {
+    font-weight: var(--wp--custom--font-weight--medium);
+}
+
+.schema-how-to-description {
+    font-weight: var(--wp--custom--font-weight--base);
+}
+
+.schema-how-to-duration-time,
+.schema-how-to-description,
+.schema-how-to-step-text {
+    margin-block-start: var(--space-xs-s);
+    margin-block-end: var(--space-s-m);
+}
+
+.schema-how-to-step-text img {
+    margin-block-start: var(--space-xs-s);
+    max-width: 100%;
+}

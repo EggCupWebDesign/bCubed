@@ -25,3 +25,8 @@ $Str_includes_path   = get_template_directory() . '/inc/';
  * Set up theme features, enqueue and dequeue CSS and JS:
  */
 require_once $Str_includes_path . 'theme-bootstrap.inc.php';
+
+/**
+ * Customise login page:
+ */
+require_once $Str_includes_path . 'login-page-config.inc.php';
