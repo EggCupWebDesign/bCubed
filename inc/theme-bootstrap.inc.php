@@ -63,6 +63,11 @@ function Theme_bootstrap()
     add_post_type_support('page', 'excerpt');
 
     /**
+     * Adjust the 'big_image_size_threshold' to 4k resolution (3840px):
+     */
+    add_filter('big_image_size_threshold', function() { return 3840; }, 999, 1);
+
+    /**
      * Re-enable the theme customizer:
      */
     add_action('customize_register', '__return_true');
@@ -307,6 +312,7 @@ function Enqueue_assets( $Arr_enqueue_list = [], $Str_type = 'styles' )
     if (!empty($Arr_enqueue_list)) {
         $Str_library_root   = get_stylesheet_directory();
         $Str_library_uri    = get_stylesheet_directory_uri();
+        $Str_modified_time  = filemtime(__FILE__);
 
         if ('styles' === $Str_type) {
             $Call_function      = 'wp_enqueue_style';
@@ -317,8 +323,6 @@ function Enqueue_assets( $Arr_enqueue_list = [], $Str_type = 'styles' )
         }
 
         foreach ($Arr_enqueue_list as $Str_handle => $Arr_properties) {
-            $Str_modified_time = '';
-
             /**
              * If the path validates as a URL with a path then it is an external resource.
              * Simply use the URL once validated:

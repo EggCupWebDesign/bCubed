@@ -13,7 +13,7 @@
  * @link       https://eggcupwebdesign.com
  */
 
-namespace EggCup\SSP\LoginConfig;
+namespace b3\WPTheme\LoginConfig;
 
 if (!defined('ABSPATH')) {
     exit;
