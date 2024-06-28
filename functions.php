@@ -6,7 +6,7 @@
  * This file is to be used solely to include functions that relate
  * directly to the theme presentation. Model and controller functions
  * belong in a plugin or must-use plugin.
- * php version 7.4.15
+ * php version 8.2.14
  *
  * @category Functions
  * @package  b3
@@ -21,12 +21,5 @@ if (!defined('ABSPATH')) {
 
 $Str_includes_path   = get_template_directory() . '/inc/';
 
-/**
- * Set up theme features, enqueue and dequeue CSS and JS:
- */
 require_once $Str_includes_path . 'theme-bootstrap.inc.php';
-
-/**
- * Customise login page:
- */
 require_once $Str_includes_path . 'login-page-config.inc.php';

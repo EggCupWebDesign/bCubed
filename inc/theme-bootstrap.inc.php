@@ -5,7 +5,7 @@
  * ---
  * Set up the theme environment, overriding and removing functions as
  * necessary, and queuing static resources.
- * php version 7.4.15
+ * php version 8.2.14
  *
  * @category   Includes
  * @package    b3
@@ -73,6 +73,16 @@ function Theme_bootstrap()
     add_action('customize_register', '__return_true');
 
     /**
+     * Declare WooCommerce support:
+     */
+    add_theme_support(
+        'woocommerce', [
+            'thumbnail_image_width' => 150,
+            'single_image_width'    => 300
+        ]
+    );
+
+    /**
      * Remove <p> and <br/> from Contact Form 7:
      */
     add_filter('wpcf7_autop_or_not', '__return_false');
@@ -90,7 +100,8 @@ function Theme_bootstrap()
  *
  * @return null
  */
-function Define_Block_styles() {
+function Define_Block_styles()
+{
     $Str_theme_text_domain = wp_get_theme()->get('TextDomain');
 
     /**
@@ -249,11 +260,12 @@ function Load_Static_resources()
  */
 function Define_Style_registrations()
 {
+    $Arr_enqueue_styles = [];
     $Str_theme_css_path = '/dist/css/';
     $Str_text_domain = wp_get_theme()->get('TextDomain');
 
     $Arr_enqueue_styles = [
-        $Str_text_domain . '-theme-styles' => [
+        $Str_text_domain . '-theme' => [
             'path'          => $Str_theme_css_path . 'common.css',
             'dependencies'  => [],
             'options'       => 'all',
@@ -261,9 +273,9 @@ function Define_Style_registrations()
     ];
 
     if (is_user_logged_in()) {
-        $Arr_enqueue_styles[ $Str_text_domain . '-admin-styles' ] = [
+        $Arr_enqueue_styles[ $Str_text_domain . '-admin' ] = [
             'path' => $Str_theme_css_path . 'admin/logged-in.css',
-            'dependencies'  => [ $Str_text_domain . '-theme-styles' ],
+            'dependencies'  => [ $Str_text_domain . '-theme' ],
             'options'       => 'all',
         ];
     }
@@ -280,6 +292,7 @@ function Define_Style_registrations()
  */
 function Define_Script_registrations()
 {
+    $Arr_enqueue_scripts = [];
     $Str_theme_js_path = '/dist/js/';
     
     $Arr_enqueue_scripts = [
@@ -411,23 +424,28 @@ function Enqueue_Block_Editor_assets()
  */
 function Enqueue_Override_styles()
 {
+    $Arr_enqueue_styles = [];
+    $Str_theme_css_path = '/dist/css/';
+    $Str_text_domain = wp_get_theme()->get('TextDomain');
+
     if (has_block('contact-form-7/contact-form-selector')) {
         /**
          * Enqueue custom styles for CF7 and require the following
          * dependencies: CF7 and WP core button block styles for the
          * submit button
          */
-        wp_enqueue_style(
-            wp_get_theme()->get('TextDomain') . '-form-cf7',
-            get_stylesheet_directory_uri() . '/dist/css/form-cf7.css',
-            [
+        $Arr_enqueue_styles[ $Str_text_domain . '-form-cf7' ] = [
+            'path'          => $Str_theme_css_path . 'form-cf7.css',
+            'dependencies'  => [
                 'contact-form-7',
                 'wp-block-button',
                 'wp-block-buttons'
             ],
-            wp_get_theme()->get('Version')
-        );
+            'options'       => 'all',
+        ];
     }
+    
+    Enqueue_assets($Arr_enqueue_styles, 'styles');
 }
 
 

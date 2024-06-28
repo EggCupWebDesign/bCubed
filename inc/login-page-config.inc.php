@@ -4,7 +4,7 @@
  * Login Page Configuration
  * ---
  * Customises the login page to use a custom logo, title and URL
- * php version 7.4.15
+ * php version 8.2.14
  *
  * @category   Includes
  * @package    b3

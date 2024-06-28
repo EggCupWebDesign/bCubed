@@ -16,29 +16,60 @@
 #
 # -----------------------------------------------------------------
 
-# Composer
-vendor/
-
-# Always-ignore extensions #
-############################
-.gitconfig
-.env
-.env.*
-!.env.example
-*.diff
-*.err
-*.orig
-**/*.log
-*.rej
-*.sass-cache
+# Dependency Management #
+#########################
+.composer/
 *.css.map
+.CVS
+.gemrc
+node_modules/
+.rvmrc
+*.sass-cache
+vendor
 
-~*
-**/*~
-**/*.bak
-**/*.sw[abcdefghijklmnop]
-**/*.vi
 
+# Version Control #
+#########################
+*.diff
+.gitconfig
+.hg
+*.rej
+.svn
+
+
+# Workspace Configurations #
+############################
+*.code-workspace
+*.esproj
+*.komodoproject
+.komodotools
+.idea
+nbproject
+.project
+.settings
+*.sublime-project
+*.sublime-workspace
+.tmproj
+
+
+# Logs / Temporary #
+####################
+error_log
+*.log
+**/*.log
+
+
+# OS generated files #
+######################
+.cache
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+desktop.ini
+ehthumbs.db
+Thumbs.db
 
 # Compiled source #
 ###################
@@ -64,101 +95,6 @@ vendor/
 *.zip
 
 
-# OS generated files #
-######################
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-desktop.ini
-.cache
-.project
-*.sublime-project
-*.sublime-workspace
-*.code-workspace
-.settings
-.tmproj
-*.esproj
-nbproject
-.sass-cache/*
-.rvmrc
-
-
-# cPanel generated files #
-##########################
-.accesshash
-.bash_*
-.bashrc
-.cagefs/
-.cl.selector/
-.config/
-.contactemail
-.cpanel/
-.ftpquota
-# Ignore root-level .htaccess, which is server-specific
-/.htaccess
-.htpasswds
-.lastlogin
-.lesshst
-.local/
-.pearrc
-.razor/
-.softaculous
-.spamassassin/
-.spamassassinboxenable
-.spamassassinenable
-.subaccounts
-.ssh/
-.trash
-.viminfo
-.well-known/
-.zshrc
-access-logs
-cpanelbranding/
-etc/
-lscache/
-lscmData/
-mail/
-php/
-ssl/
-www
-
-
-# Logs and databases #
-######################
-*.log
-#*.sql			# Using Git to backup MySQL dumps
-*.sqlite
-error_log
-
-# Dreamweaver added files
-_notes
-dwsync.xml
-
-# Komodo
-*.komodoproject
-.komodotools
-
-
-# Folders to ignore #
-#####################
-.hg
-.idea
-.project
-.svn
-.CVS
-
-/backup/
-/logs/
-/old/
-/private/
-/tmp/
-/trash/
-
-
 # Video files #
 ###############
 *.wmv
@@ -178,3 +114,16 @@ dwsync.xml
 *.wav
 *.mp3
 *.wma
+
+
+# Generic folders #
+###################
+/backup/
+/old/
+/private/
+/trash/
+
+
+# Generic excludes #
+####################
+!.gitkeep
