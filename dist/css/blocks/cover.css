@@ -1,9 +1,9 @@
-.wp-block-cover.is-style-cover-hero {
-    margin-bottom: var(--space-m-l);
-    padding: var(--space-xl-2xl) var(--space-m-l);
+.wp-block-cover {
+    padding: var(--space-s-m);
 }
 
-.is-style-cover-hero .wp-block-group.is-style-call-to-action {
-    margin-top: var(--space-m);
-    margin-bottom: var(--space-m);
+.is-style-cover-hero {
+    margin-block-end: var(--space-m-l);
+    padding-block: var(--space-xl-2xl);
+    padding-inline: var(--space-m-l);
 }

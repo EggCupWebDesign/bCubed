@@ -1,9 +1,13 @@
-.is-style-primary .wp-element-button, 
-.is-style-primary .wp-block-button__link {
-    background-color: var(--wp--preset--color--primary-dark);
+.is-style-secondary .wp-element-button, 
+.is-style-secondary .wp-block-button__link {
+    background-color: var(--wp--preset--color--secondary);
 }
 
-.is-style-primary .wp-element-button:hover,
-.is-style-primary .wp-block-button__link:hover {
-    background-color: var(--wp--preset--color--primary);
+.is-style-secondary .wp-element-button:active,
+.is-style-secondary .wp-block-button__link:active,
+.is-style-secondary .wp-element-button:focus,
+.is-style-secondary .wp-block-button__link:focus,
+.is-style-secondary .wp-element-button:hover,
+.is-style-secondary .wp-block-button__link:hover {
+    background-color: var(--wp--preset--color--secondary-dark);
 }

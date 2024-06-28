@@ -1,6 +1,4 @@
-.wp-block-table { font-size: var(--wp--preset--font-size--small); }
-
 .wp-block-table th,
 .wp-block-table td {
-    padding: var(--space-3xs-2xs) var(--space-3xs-2xs);
+    padding: var(--space-3xs-2xs);
 }

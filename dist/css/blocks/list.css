@@ -1,7 +1,14 @@
+ul {
+    list-style-type: disc;
+    padding-inline-start: var(--space-s-m);
+}
+
 .is-style-list-unstyled,
 .is-style-list-inline {
-    padding-left: 0;
+    padding-inline-start: 0;
     list-style: none;
 }
-.is-style-list-inline li { display: inline-block; }
-.is-style-list-inline li:not(:last-child) { margin-right: var(--space-xs); }
+
+.is-style-list-inline li {
+    display: inline-block;
+}

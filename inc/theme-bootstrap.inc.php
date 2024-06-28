@@ -111,10 +111,10 @@ function Define_Block_styles()
      */
     $Arr_custom_block_styles = [
         'core/button' => [
-            'primary' => [
-                'name'  => 'primary',
-                'label' => __('Primary', $Str_theme_text_domain),
-                'style' => $Str_theme_text_domain . '-button-primary'
+            'secondary' => [
+                'name'  => 'secondary',
+                'label' => __('Secondary', $Str_theme_text_domain),
+                'style' => $Str_theme_text_domain . '-button-secondary'
             ]
         ],
         'core/cover' => [
@@ -444,7 +444,7 @@ function Enqueue_Override_styles()
             'options'       => 'all',
         ];
     }
-    
+
     Enqueue_assets($Arr_enqueue_styles, 'styles');
 }
 

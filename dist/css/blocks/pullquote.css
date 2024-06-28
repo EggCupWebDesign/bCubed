@@ -1,0 +1,7 @@
+.wp-block-pullquote blockquote {
+    margin: var(--space-s);
+}
+
+.wp-block-pullquote p {
+    margin-block: var(--space-2xs);
+}
