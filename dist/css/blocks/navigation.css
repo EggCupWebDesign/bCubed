@@ -1,0 +1,38 @@
+/* ----------------------------------------- *
+ * Navigation
+ * ----------------------------------------- */
+.wp-block-navigation .wp-block-navigation-item__content {
+    padding: var(--space-3xs-2xs);
+}
+
+.wp-block-navigation__responsive-container:not(.is-menu-open) .current-menu-item.wp-block-navigation-link a,
+.wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation-link a:active,
+.wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation-link a:focus,
+.wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation-link a:hover {
+    color: var(--wp--preset--color--background);
+    background: var(--wp--preset--color--primary);
+}
+
+.wp-block-navigation__responsive-container:not(.is-menu-open) .current-menu-item.wp-block-navigation-link a {
+    font-weight: var(--wp--custom--font-weight--medium);
+}
+
+/** Navigation menu burger button: **/
+.wp-block-navigation__responsive-container-open {
+    padding: var(--wp--preset--spacing--20);
+}
+
+/** Responsive menu dialogue container: **/
+.has-modal-open .is-menu-open .wp-block-navigation__responsive-dialog {
+    margin-top: var(--wp--preset--spacing--60);
+    margin-bottom: var(--wp--preset--spacing--80);
+}
+
+/** Gap between menu items inside responsive menu: **/
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__container {
+    gap: var(--space-s-m);
+}
+
+.wp-block-post-terms__prefix {
+    font-weight: var(--wp--custom--font-weight--base);
+}
