@@ -1,26 +1,6 @@
 /* Groups, CTAs, Callouts and Wells
 -------------------------------------------------------------- */
-.wp-block-group.is-style-call-to-action {
-    margin-top: var(--space-m-l);
-    margin-bottom: var(--space-m-l);
-    padding: var(--space-s-m) var(--space-xs-m) var(--space-l-xl) var(--space-xs-m);
-}
-
-.wp-block-group.is-style-call-to-action>*,
-.wp-block-group.is-style-call-to-action .wp-block-buttons {
-    padding-right: var(--space-3xs);
-    padding-left: var(--space-3xs);
-}
-
-.wp-block-group.is-style-callout {
-    margin-top: var(--space-xs-s);
-    margin-bottom: var(--space-xs-s);
-    padding: var(--space-xs-s) var(--space-s-m);
-}
-
 .wp-block-group.is-style-well-sm {
-    margin-top: var(--space-xs-s);
-    margin-bottom: var(--space-xs-s);
     padding: var(--space-2xs-xs);
 }
 
@@ -29,6 +9,7 @@
 }
 
 .wp-block-group.is-style-well {
+    margin-block: var(--space-s-m);
     padding: var(--space-xs-s);
 }
 
@@ -38,39 +19,19 @@
 
 .wp-block-group.is-style-well-lg {
     padding-top: var(--space-m-l);
-    padding-right: var(--space-m-l);
     padding-bottom: var(--space-l-xl);
-    padding-left: var(--space-m-l);
-}
-
-.is-style-header,
-.is-style-footer {
-    padding-right: var(--space-2xs-xs);
-    padding-left: var(--space-2xs-xs);
-}
-
-.is-style-header {
-    padding-top: var(--space-xs-s);
-    padding-bottom: var(--space-xs-s);
-}
-
-.is-style-footer {
-    padding-top: var(--space-m-l);
-    padding-bottom: var(--space-m-l);
-    margin-top: var(--space-xl-2xl);
-    font-size: 80%;
-    line-height: var(--wp--custom--line-height--base);
-}
-
-body .is-style-footer .is-layout-flow > * + * {
-    margin-block-start: var(--space-3xs-2xs);
-}
-
-.site-footer .wp-block-site-title {
-    display: inline;
+    padding-inline: var(--space-m-l);
 }
 
 .wp-block-group.is-style-section {
-    margin-top: var(--space-l-xl);
-    margin-bottom: var(--space-l-xl);
+    margin-block: var(--space-l-xl);
+}
+
+.is-style-header {
+    padding-block: var(--space-xs-s);
+}
+
+.is-style-footer {
+    margin-top: var(--space-xl-2xl);
+    padding-block: var(--space-m-l);
 }

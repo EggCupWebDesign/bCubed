@@ -118,19 +118,19 @@
 <!-- wp:list {"className":"is-style-list-inline"} -->
 <ul class="is-style-list-inline">
     <!-- wp:list-item -->
-    <li>Etiam dignissim vel tellus vel semper |</li>
+    <li>Etiam dignissim vel tellus vel semper</li>
     <!-- /wp:list-item -->
 
     <!-- wp:list-item -->
-    <li>Aenean laoreet justo id malesuada congue |</li>
+    <li>Aenean laoreet justo id malesuada congue</li>
     <!-- /wp:list-item -->
 
     <!-- wp:list-item -->
-    <li>Curabitur lacinia porta posuere |</li>
+    <li>Curabitur lacinia porta posuere</li>
     <!-- /wp:list-item -->
 
     <!-- wp:list-item -->
-    <li>Duis placerat faucibus eros |</li>
+    <li>Duis placerat faucibus eros</li>
     <!-- /wp:list-item -->
 
     <!-- wp:list-item -->

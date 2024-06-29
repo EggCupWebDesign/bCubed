@@ -12,3 +12,7 @@ ul {
 .is-style-list-inline li {
     display: inline-block;
 }
+
+.is-style-list-inline li:not(:last-child) {
+    margin-right: var(--space-2xs);
+}

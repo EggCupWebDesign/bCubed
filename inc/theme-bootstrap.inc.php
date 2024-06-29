@@ -125,16 +125,6 @@ function Define_Block_styles()
             ]
         ],
         'core/group' => [
-            'callout' => [
-                'name'  => 'callout',
-                'label' => __('Callout', $Str_theme_text_domain),
-                'style' => $Str_theme_text_domain . '-group-callout'
-            ],
-            'cta' => [
-                'name'  => 'call-to-action',
-                'label' => __('CTA', $Str_theme_text_domain),
-                'style' => $Str_theme_text_domain . '-group-cta'
-            ],
             'well-sm' => [
                 'name'  => 'well-sm',
                 'label' => __('Small Well', $Str_theme_text_domain),
@@ -153,17 +143,17 @@ function Define_Block_styles()
             'header' => [
                 'name'  => 'header',
                 'label' => __('Header', $Str_theme_text_domain),
-                'style' => $Str_theme_text_domain . '-header-group'
+                'style' => $Str_theme_text_domain . '-group-header'
             ],
             'footer' => [
                 'name'  => 'footer',
                 'label' => __('Footer', $Str_theme_text_domain),
-                'style' => $Str_theme_text_domain . '-footer-group'
+                'style' => $Str_theme_text_domain . '-group-footer'
             ],
             'section' => [
                 'name'  => 'section',
                 'label' => __('Section', $Str_theme_text_domain),
-                'style' => $Str_theme_text_domain . '-section-group'
+                'style' => $Str_theme_text_domain . '-group-section'
             ],
         ],
         'core/list' => [

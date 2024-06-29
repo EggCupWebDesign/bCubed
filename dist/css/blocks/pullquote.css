@@ -1,7 +1,7 @@
 .wp-block-pullquote blockquote {
-    margin: var(--space-s);
+    margin-inline: var(--space-l-xl);
 }
 
 .wp-block-pullquote p {
-    margin-block: var(--space-2xs);
+    margin-block-end: .75em;
 }

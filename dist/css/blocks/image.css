@@ -1,3 +1,7 @@
+.wp-block-image img {
+    border: 1px solid var(--wp--preset--color--greyscale-quinary);
+}
+
 .wp-block-image figcaption {
     text-align: center;
 }
