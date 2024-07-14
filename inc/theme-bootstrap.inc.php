@@ -197,6 +197,7 @@ function Enqueue_Block_styles()
             'group',
             'image',
             'list',
+            'navigation',
             'post-date',
             'pullquote',
             'quote',

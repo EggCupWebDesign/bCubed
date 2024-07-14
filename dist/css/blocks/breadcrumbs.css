@@ -2,6 +2,12 @@
     font-size: var(--wp--preset--font-size--tiny);
 }
 
+@media (min-width: 768px) {
+    .breadcrumb_last {
+        white-space: nowrap;
+    }
+}
+
 .yoast-breadcrumbs .separator {
     vertical-align: text-bottom;
 }

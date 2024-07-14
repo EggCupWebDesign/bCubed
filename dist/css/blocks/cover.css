@@ -5,5 +5,4 @@
 .is-style-cover-hero {
     margin-block-end: var(--space-m-l);
     padding-block: var(--space-xl-2xl);
-    padding-inline: var(--space-m-l);
 }

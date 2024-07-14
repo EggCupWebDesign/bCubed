@@ -3,5 +3,5 @@
 }
 
 .wp-block-pullquote p {
-    margin-block-end: .75em;
+    margin-block-end: var(--space-xs-s);
 }

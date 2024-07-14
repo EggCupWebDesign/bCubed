@@ -2,6 +2,18 @@
     border: 1px solid var(--wp--preset--color--greyscale-quinary);
 }
 
+@media (max-width: 425px) {
+    .wp-block-image img {
+        width: 100vw;
+    }
+
+    body .is-layout-constrained > .alignleft,
+    body .is-layout-constrained > .alignright {
+        margin-inline-start: 0 !important;
+        float: unset !important;
+    }
+}
+
 .wp-block-image figcaption {
     text-align: center;
 }
