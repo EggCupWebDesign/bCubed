@@ -192,6 +192,7 @@ function Enqueue_Block_styles()
     $Str_block_css_path = 'dist/css/blocks/';
     $Arr_styled_blocks = [
         'core' => [
+            'avatar',
             'button',
             'cover',
             'group',

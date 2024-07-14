@@ -66,3 +66,10 @@ a {
 main {
     flex-grow: 1;
 }
+
+/* ----------------------------------------- *
+ * Post Author
+ * ----------------------------------------- */
+.post-author-box {
+    margin-block-start: var(--space-l-xl);
+}

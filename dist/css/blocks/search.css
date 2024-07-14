@@ -7,13 +7,3 @@ label {
 .wp-block-search__input {
     font-size: var(--wp--preset--font-size--medium);
 }
-
-.wp-block-query-no-results {
-    background-color: var(--wp--preset--color--greyscale-primary);
-    margin-top: var(--space-s-m);
-    margin-bottom: var(--space-s-m);
-    padding-top: var(--space-l);
-    padding-right: var(--space-s-l);
-    padding-bottom: var(--space-l);
-    padding-left: var(--space-s-l);
-}

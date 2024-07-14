@@ -18,23 +18,23 @@
         <!-- wp:group {"layout":{"inherit":true}} -->
         <div class="wp-block-group">
             <!-- wp:post-template {"align":"wide"} -->
-            <!-- wp:group {"layout":{"inherit":true}} -->
-            <div class="wp-block-group">
-                <!-- wp:post-title /-->
-                <!-- wp:template-part {"slug":"post-meta"} /-->
-                <!-- wp:post-featured-image {"align":"wide"} /-->
+                <!-- wp:group {"layout":{"inherit":true}} -->
+                <div class="wp-block-group">
+                    <!-- wp:post-title /-->
+                    <!-- wp:template-part {"slug":"post-meta"} /-->
+                    <!-- wp:post-featured-image {"align":"wide"} /-->
 
-                <!-- wp:post-excerpt {"moreText":"Read more&hellip;"} /-->
-                <!-- wp:template-part {"slug":"post-terms"} /-->
-            </div>
-            <!-- /wp:group -->
+                    <!-- wp:post-excerpt {"moreText":"Read more&hellip;"} /-->
+                    <!-- wp:template-part {"slug":"post-terms"} /-->
+                </div>
+                <!-- /wp:group -->
             <!-- /wp:post-template -->
 
             <!-- wp:template-part {"slug":"query-pagination"} /-->
 
             <!-- wp:query-no-results {"align":"wide"} -->
-                <!-- wp:group {"layout":{"inherit":true}} -->
-                <div class="wp-block-group">
+                <!-- wp:group {"align":"wide","backgroundColor":"greyscale-primary","className":"is-style-well-lg","layout":{"type":"constrained"}} -->
+                <div class="wp-block-group alignwide is-style-well-lg has-greyscale-primary-background-color has-background">
                     <!-- wp:heading {"level":2} -->
                     <h2>No results found</h2>
                     <!-- /wp:heading -->
@@ -54,8 +54,8 @@
                 <!-- wp:paragraph -->
                 <p>Try searching again below with one or two different words:</p>
                 <!-- /wp:paragraph -->
-
-                <!-- wp:search {"label":"Search our site:","buttonText":"Search"} /-->
+                
+                <!-- wp:template-part {"slug":"search-box"} /-->
             </div>
             <!-- /wp:group -->
 

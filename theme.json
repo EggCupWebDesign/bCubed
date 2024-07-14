@@ -438,6 +438,7 @@
             },
             "core/post-author-name": {
                 "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--rounded-sans)",
                     "fontSize": "var(--wp--preset--font-size--x-large)"
                 }
             },
@@ -537,6 +538,11 @@
                 }
               },
             "core/post-terms": {
+                "spacing": {
+                    "margin": {
+                        "top": "var(--space-m-l)"
+                    }
+                },
                 "typography": {
                     "fontSize": "var(--wp--preset--font-size--small)"
                 }
@@ -587,19 +593,6 @@
                 "typography": {
                     "fontSize": "var(--wp--preset--font-size--medium)",
                     "lineHeight": "var(--wp--custom--line-height--medium)"
-                }
-            },
-            "core/search": {
-                "color": {
-                    "background": "var(--wp--preset--color--greyscale-primary)"
-                },
-                "spacing": {
-                    "padding": {
-                        "top": "var(--space-xs-s)",
-                        "right": "var(--space-xs-s)",
-                        "bottom": "var(--space-xs-s)",
-                        "left": "var(--space-xs-s)"
-                    }
                 }
             },
             "core/site-title": {
@@ -803,6 +796,11 @@
     "patterns": [],
     "templateParts": [
         {
+            "title": "Author Box",
+            "name": "author-box",
+            "area": "uncategorized"
+        },
+        {
             "title": "Footer",
             "name": "footer",
             "area": "footer"
@@ -825,6 +823,16 @@
         {
             "title": "Post Terms",
             "name": "post-terms",
+            "area": "uncategorized"
+        },
+        {
+            "title": "Query Pagination",
+            "name": "query-pagination",
+            "area": "uncategorized"
+        },
+        {
+            "title": "Search Box",
+            "name": "search-box",
             "area": "uncategorized"
         }
     ]

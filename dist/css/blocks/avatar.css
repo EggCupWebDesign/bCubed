@@ -1,0 +1,4 @@
+.wp-block-avatar:not(:has(img)) {
+    background: center / contain no-repeat url('../../img/woocommerce-placeholder-768x768.png');
+    height: 8em;
+}
