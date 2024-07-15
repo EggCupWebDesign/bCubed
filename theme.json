@@ -1,6 +1,4 @@
 {
-    "$schema": "https://schemas.wp.org/trunk/theme.json",
-    "version": 3,
     "settings": {
         "background": {
             "backgroundImage": false,
@@ -25,9 +23,9 @@
             "defaultGradients": false,
             "gradients": [
                 {
-                    "name": "Foreground to Background",
-                    "gradient": "linear-gradient(135deg, var(--wp--preset--color--foreground), var(--wp--preset--color--background))",
-                    "slug": "foreground-to-background"
+                    "name": "Brand Contrast to Brand Base",
+                    "gradient": "linear-gradient(135deg, var(--wp--preset--color--brand-contrast), var(--wp--preset--color--brand-base))",
+                    "slug": "brand-contrast-to-brand-base"
                 },
                 {
                     "name": "Primary to Secondary",
@@ -45,39 +43,39 @@
                     "color": "transparent"
                 },
                 {
-                    "name": "Off White",
+                    "name": "Brand Base",
                     "color": "#f7f7f7",
-                    "slug": "background"
+                    "slug": "brand-base"
                 },
                 {
                     "name": "Lighter Grey",
-                    "color": "#eaeaea",
+                    "color": "#e6e6e6",
                     "slug": "greyscale-primary"
                 },
                 {
                     "name": "Light Grey",
-                    "color": "#bfbfbf",
+                    "color": "#cccccc",
                     "slug": "greyscale-secondary"
                 },
                 {
 					"name": "Mid Grey",
-					"color": "#959595",
+					"color": "#999999",
                     "slug": "greyscale-tertiary"
 				},
                 {
                     "name": "Dark Grey",
-                    "color": "#6a6a6a",
+                    "color": "#666666",
                     "slug": "greyscale-quaternary"
                 },
                 {
 					"name": "Darker Grey",
-                    "color": "#404040",
+                    "color": "#333333",
 					"slug": "greyscale-quinary"
 				},
                 {
-                    "name": "Base Black",
-                    "color": "#151515",
-                    "slug": "foreground"
+                    "name": "Brand Contrast",
+                    "color": "#000000",
+                    "slug": "brand-contrast"
                 },
                 {
 					"name": "Brand Primary",
@@ -438,13 +436,13 @@
             },
             "core/post-author-name": {
                 "typography": {
-                    "fontFamily": "var(--wp--preset--font-family--rounded-sans)",
+                    "fontFamily": "var(--wp--preset--font-family--geometric-humanist)",
                     "fontSize": "var(--wp--preset--font-size--x-large)"
                 }
             },
             "core/navigation": {
                 "typography": {
-                    "fontFamily": "var(--wp--preset--font-family--rounded-sans)",
+                    "fontFamily": "var(--wp--preset--font-family--geometric-humanist)",
 					"fontSize": "var(--wp--preset--font-size--small)"
 				}
             },
@@ -490,24 +488,24 @@
                         },
 						"color": {
 				            "background": "var(--wp--preset--color--link-primary)",
-					        "text": "var(--wp--preset--color--background)"
+					        "text": "var(--wp--preset--color--brand-base)"
 						},
                         ":active": {
                             "color": {
                                 "background": "var(--wp--preset--color--link-secondary)",
-                                "text": "var(--wp--preset--color--background)"
+                                "text": "var(--wp--preset--color--brand-base)"
                             }
                         },
                         ":focus": {
                             "color": {
                                 "background": "var(--wp--preset--color--link-secondary)",
-                                "text": "var(--wp--preset--color--background)"
+                                "text": "var(--wp--preset--color--brand-base)"
                             }
                         },
                         ":hover": {
                             "color": {
                                 "background": "var(--wp--preset--color--link-secondary)",
-                                "text": "var(--wp--preset--color--background)"
+                                "text": "var(--wp--preset--color--brand-base)"
                             }
                         },
 						"spacing": {
@@ -607,13 +605,13 @@
         },
         "border": {},
         "color": {
-            "text": "var(--wp--preset--color--foreground)",
-            "background": "var(--wp--preset--color--background)"
+            "text": "var(--wp--preset--color--brand-contrast)",
+            "background": "var(--wp--preset--color--brand-base)"
         },
         "elements": {
             "caption": {
                 "color": {
-                    "text": "var(--wp--preset--color--background)",
+                    "text": "var(--wp--preset--color--brand-base)",
                     "background": "var(--wp--preset--color--greyscale-quinary)"
                 },
                 "spacing": {
@@ -649,7 +647,7 @@
 				},
 				"color": {
 					"background": "var(--wp--preset--color--link-primary)",
-					"text": "var(--wp--preset--color--background)"
+					"text": "var(--wp--preset--color--brand-base)"
 				},
                 ":active": {
 					"color": {
@@ -706,7 +704,7 @@
             },
             "heading": {
                 "typography": {
-                    "fontFamily": "var(--wp--preset--font-family--rounded-sans)"
+                    "fontFamily": "var(--wp--preset--font-family--geometric-humanist)"
                 }
             },
             "h1": {
@@ -835,5 +833,7 @@
             "name": "search-box",
             "area": "uncategorized"
         }
-    ]
+    ],
+    "$schema": "https://schemas.wp.org/trunk/theme.json",
+    "version": 3
 }

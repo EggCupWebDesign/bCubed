@@ -147,8 +147,8 @@
 <p>Etiam dignissim vel tellus vel semper. Aenean laoreet justo id malesuada congue. Curabitur lacinia porta posuere. Donec convallis eleifend felis, eget vestibulum lectus aliquam at. Duis placerat faucibus eros. Aliquam erat volutpat.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:group {"style":{"elements":{"link":{"color":{"text":"var:preset|color|background"}}}},"backgroundColor":"primary","textColor":"background","className":"is-style-well","layout":{"type":"default"}} -->
-<div class="wp-block-group is-style-well has-background-color has-primary-background-color has-text-color has-background has-link-color">
+<!-- wp:group {"style":{"elements":{"link":{"color":{"text":"var:preset|color|brand-base"}}}},"backgroundColor":"primary","textColor":"brand-base","className":"is-style-well","layout":{"type":"default"}} -->
+<div class="wp-block-group is-style-well has-brand-base-color has-primary-background-color has-text-color has-background has-link-color">
     <!-- wp:heading -->
     <h2 class="wp-block-heading">Medium well</h2>
     <!-- /wp:heading -->

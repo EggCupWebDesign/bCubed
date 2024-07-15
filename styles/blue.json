@@ -1,0 +1,133 @@
+{
+    "settings": {
+        "color": {
+            "palette": [
+                {
+                    "name": "Transparent",
+                    "slug": "transparent",
+                    "color": "transparent"
+                },
+                {
+                    "name": "Brand Base",
+                    "color": "#f7f7f7",
+                    "slug": "brand-base"
+                },
+                {
+                    "name": "Lighter Grey",
+                    "color": "#cccccc",
+                    "slug": "greyscale-primary"
+                },
+                {
+                    "name": "Light Grey",
+                    "color": "#aaaaaa",
+                    "slug": "greyscale-secondary"
+                },
+                {
+					"name": "Mid Grey",
+					"color": "#888888",
+                    "slug": "greyscale-tertiary"
+				},
+                {
+                    "name": "Dark Grey",
+                    "color": "#555555",
+                    "slug": "greyscale-quaternary"
+                },
+                {
+					"name": "Darker Grey",
+                    "color": "#333333",
+					"slug": "greyscale-quinary"
+				},
+                {
+                    "name": "Brand Contrast",
+                    "color": "#111111",
+                    "slug": "brand-contrast"
+                },
+                {
+					"name": "Brand Primary",
+					"slug": "primary",
+					"color": "#0d3c59"
+				},
+                {
+					"name": "Brand Primary (Light)",
+					"slug": "primary-light",
+					"color": "#869eac"
+				},
+                {
+					"name": "Brand Primary (Dark)",
+					"slug": "primary-dark",
+					"color": "#0a3047"
+				},
+                {
+					"name": "Brand Secondary",
+					"slug": "secondary",
+					"color": "#05a8a0"
+				},
+                {
+					"name": "Brand Secondary (Light)",
+					"slug": "secondary-light",
+					"color": "#69cbc6"
+				},
+                {
+					"name": "Brand Secondary (Dark)",
+					"slug": "secondary-dark",
+					"color": "#035450"
+				},
+                {
+					"name": "Brand Tertiary",
+					"slug": "tertiary",
+					"color": "#4a82af"
+				},
+                {
+					"name": "Brand Tertiary (Light)",
+					"slug": "tertiary-light",
+					"color": "#5ca2db"
+				},
+                {
+					"name": "Brand Tertiary (Dark)",
+					"slug": "tertiary-dark",
+					"color": "#2e516e"
+				},
+                {
+                    "name": "Link Primary",
+                    "color": "var(--wp--preset--color--primary)",
+                    "slug": "link-primary"
+                },
+                {
+                    "name": "Link Secondary",
+                    "color": "var(--wp--preset--color--primary-dark)",
+                    "slug": "link-secondary"
+                },
+                {
+                    "name": "Link Tertiary",
+                    "color": "var(--wp--preset--color--secondary)",
+                    "slug": "link-tertiary"
+                }
+            ]
+        }
+    },
+    "styles": {
+        "blocks": {
+            "core/post-author-name": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--rounded-sans)"
+                }
+            },
+            "core/navigation": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--rounded-sans)"
+				}
+            }
+        },
+        "elements": {
+            "heading": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--rounded-sans)"
+                }
+            }
+        }
+    },
+    "title": "Blue",
+    "description": "Aqua-themed style variation",
+    "$schema": "https://schemas.wp.org/trunk/theme.json",
+    "version": 3
+}
