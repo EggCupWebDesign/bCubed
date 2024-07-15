@@ -441,12 +441,6 @@
                 }
             },
             "core/navigation": {
-                "typography": {
-                    "fontFamily": "var(--wp--preset--font-family--geometric-humanist)",
-					"fontSize": "var(--wp--preset--font-size--small)"
-				}
-            },
-            "core/navigation-link": {
                 "elements": {
                     "link": {
                         ":active": {
@@ -468,7 +462,11 @@
                             "textDecoration": "none"
                         }
                     }
-                }
+                },
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--geometric-humanist)",
+					"fontSize": "var(--wp--preset--font-size--small)"
+				}
             },
             "core/navigation-submenu": {
                 "typography": {
@@ -684,6 +682,12 @@
                 ":focus": {
                     "color": {
 						"text": "var(--wp--preset--color--link-secondary)"
+					},
+                    "outline": {
+						"color": "inherit",
+						"offset": "2px",
+						"style": "dashed",
+						"width": "2px"
 					},
 					"typography": {
 						"textDecoration": "none"

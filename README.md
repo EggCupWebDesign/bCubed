@@ -23,6 +23,7 @@
 - Primary: #0d3c59 ([Shades & Tints](https://noeldelgado.github.io/shadowlord/#0d3c59))
 - Secondary: #05a8a0 ([Shades & Tints](https://noeldelgado.github.io/shadowlord/#05a8a0))
 - Tertiary: #4a82af ([Shades & Tints](https://noeldelgado.github.io/shadowlord/#4a82af))
+- Greyscale: #4a82af ([Shades & Tints](https://noeldelgado.github.io/shadowlord/#aaaaaa))
 
 ## Accessibility
 - [Brand Base vs. Brand Contrast](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=F7F7F7)
