@@ -2,8 +2,16 @@
 
 <!-- wp:group {"tagName":"main","style":{"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
 <main class="wp-block-group" style="margin-top:0;margin-bottom:0">
-    <!-- wp:query-title {"type":"archive","showPrefix":false,"align":"wide"} /-->
-    <!-- wp:term-description {"align":"wide"} /-->
+    <!-- wp:group {"tagName":"header","align":"wide","layout":{"type":"default"}} -->
+    <header class="wp-block-group alignwide">
+        <!-- wp:heading {"level":1} -->
+        <h1 class="wp-block-heading">News</h1>
+        <!-- /wp:heading -->
+        <!-- wp:paragraph {"fontSize":"normal"} -->
+        <p class="has-normal-font-size">Latest updates and developments</p>
+        <!-- /wp:paragraph -->
+    </header>
+    <!-- /wp:group -->
     
     <!-- wp:template-part {"slug":"query"} /-->
     <!-- wp:template-part {"slug":"query-pagination"} /-->

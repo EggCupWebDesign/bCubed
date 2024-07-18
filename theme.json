@@ -490,20 +490,23 @@
 						},
                         ":active": {
                             "color": {
-                                "background": "var(--wp--preset--color--link-secondary)",
-                                "text": "var(--wp--preset--color--brand-base)"
+                                "background": "var(--wp--preset--color--link-secondary)"
                             }
                         },
                         ":focus": {
                             "color": {
-                                "background": "var(--wp--preset--color--link-secondary)",
-                                "text": "var(--wp--preset--color--brand-base)"
+                                "background": "var(--wp--preset--color--link-secondary)"
+                            },
+                            "outline": {
+                                "color": "inherit",
+                                "offset": "2px",
+                                "style": "dashed",
+                                "width": "2px"
                             }
                         },
                         ":hover": {
                             "color": {
-                                "background": "var(--wp--preset--color--link-secondary)",
-                                "text": "var(--wp--preset--color--brand-base)"
+                                "background": "var(--wp--preset--color--link-secondary)"
                             }
                         },
 						"spacing": {
@@ -825,6 +828,11 @@
         {
             "title": "Post Terms",
             "name": "post-terms",
+            "area": "uncategorized"
+        },
+        {
+            "title": "Query",
+            "name": "query",
             "area": "uncategorized"
         },
         {
