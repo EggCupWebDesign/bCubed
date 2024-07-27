@@ -167,6 +167,13 @@ function Define_Block_styles()
                 'label' => __('Unstyled', $Str_theme_text_domain),
                 'style' => $Str_theme_text_domain . '-list-unstyled'
             ]
+        ],
+        'core/paragraph' => [
+            'indented' => [
+                'name'  => 'paragraph-indented',
+                'label' => __('Indented', $Str_theme_text_domain),
+                'style' => $Str_theme_text_domain . '-paragraph-indented'
+            ]
         ]
     ];
     foreach ( $Arr_custom_block_styles as $Str_block_name => $Arr_block_styles ) {
@@ -199,6 +206,7 @@ function Enqueue_Block_styles()
             'image',
             'list',
             'navigation',
+            'paragraph',
             'post-date',
             'pullquote',
             'quote',

@@ -49,7 +49,7 @@
                 },
                 {
                     "name": "Lighter Grey",
-                    "color": "#e6e6e6",
+                    "color": "#e0e0e0",
                     "slug": "greyscale-primary"
                 },
                 {
@@ -64,12 +64,12 @@
 				},
                 {
                     "name": "Dark Grey",
-                    "color": "#666666",
+                    "color": "#5c5c5c",
                     "slug": "greyscale-quaternary"
                 },
                 {
 					"name": "Darker Grey",
-                    "color": "#333333",
+                    "color": "#3d3d3d",
 					"slug": "greyscale-quinary"
 				},
                 {

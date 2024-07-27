@@ -11,22 +11,30 @@
 ## Spacing and Layout
 - Fluid whitespace rhythm provided by Utopia Fluid Space Calculator - [21px @ 360w to 24px @ 1280px](https://utopia.fyi/space/calculator/?c=360,21,1.2,1280,24,1.25,5,2,&s=0.75|0.5|0.25|0,1.5|2|3|4|6|8,s-l|4xs-xs|xs-m&g=s,l,xl,12)
 
+### Accessibility
+- Minimum supported viewport width: [360px](https://gs.statcounter.com/screen-resolution-stats/mobile/worldwide)
+
+
 ## Colourscheme
 - TODO: Add dark mode styles override
 - Colour naming convention based on the principles established by [Rich Tabor](https://richtabor.com/standardizing-theme-json-colors/).
 
-### Main
+### Brand
 - Primary: #2B2BF3 ([Shades & Tints](https://noeldelgado.github.io/shadowlord/#2B2BF3))
 - Secondary: #FBBA00 ([Shades & Tints](https://noeldelgado.github.io/shadowlord/#FBBA00))
+- Base: #f7f7f7
+- Contrast: #000000
 
-### Blue
-- Primary: #0d3c59 ([Shades & Tints](https://noeldelgado.github.io/shadowlord/#0d3c59))
-- Secondary: #05a8a0 ([Shades & Tints](https://noeldelgado.github.io/shadowlord/#05a8a0))
-- Tertiary: #4a82af ([Shades & Tints](https://noeldelgado.github.io/shadowlord/#4a82af))
-- Greyscale: #4a82af ([Shades & Tints](https://noeldelgado.github.io/shadowlord/#aaaaaa))
+### Support
+- Link Primary: #2B2BF3
+- Link Secondary: #5555f5
+- Link Tertiary: #FBBA00
+- Greyscale: #999999 ([Shades & Tints](https://noeldelgado.github.io/shadowlord/#999999))
 
-## Accessibility
+### Accessibility
 - [Brand Base vs. Brand Contrast](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=F7F7F7)
+- [Brand Base vs. Brand Primary](https://webaim.org/resources/contrastchecker/?fcolor=2B2BF3&bcolor=F4F4F4)
+
 
 ## References
 - [Full Site Editing Tutorial](https://fullsiteediting.com/lessons/creating-block-based-themes/) with the accompanying [GIThub repo](https://github.com/carolinan/fullsiteediting)
