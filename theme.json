@@ -175,6 +175,7 @@
         "spacing": {
             "blockGap": true,
             "customSpacingSize": false,
+            "defaultSpacingSizes": false,
             "margin": true,
             "padding": true,
             "spacingScale": {},
@@ -182,47 +183,47 @@
 				{
 					"size": "var(--space-3xs-2xs)",
 					"slug": "10",
-					"name": "1"
+					"name": "3X-Small"
 				},
 				{
 					"size": "var(--space-2xs-xs)",
 					"slug": "20",
-					"name": "2"
+					"name": "2X-Small"
 				},
 				{
 					"size": "var(--space-xs-s)",
 					"slug": "30",
-					"name": "3"
+					"name": "X-Small"
 				},
 				{
 					"size": "var(--space-s-m)",
 					"slug": "40",
-					"name": "4"
+					"name": "Small"
 				},
 				{
 					"size": "var(--space-m-l)",
 					"slug": "50",
-					"name": "5"
+					"name": "Medium"
 				},
 				{
 					"size": "var(--space-l-xl)",
 					"slug": "60",
-					"name": "6"
+					"name": "Large"
 				},
 				{
 					"size": "var(--space-xl-2xl)",
 					"slug": "70",
-					"name": "7"
+					"name": "X-Large"
 				},
 				{
 					"size": "var(--space-2xl-3xl)",
 					"slug": "80",
-					"name": "8"
+					"name": "2X-Large"
 				},
 				{
 					"size": "var(--space-3xl-4xl)",
 					"slug": "90",
-					"name": "9"
+					"name": "3X-Large"
 				}
 			],
             "units": [
@@ -846,6 +847,6 @@
             "area": "uncategorized"
         }
     ],
-    "$schema": "https://schemas.wp.org/trunk/theme.json",
+    "$schema": "https://schemas.wp.org/wp/6.6/theme.json",
     "version": 3
 }
